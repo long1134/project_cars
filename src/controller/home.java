@@ -70,7 +70,6 @@ public class home implements Initializable {
         TreeItem<String> name = new TreeItem<>("Long vip");
         TreeTableColumn<String,String> columnName = new TreeTableColumn<>("Name");
         columnName.setPrefWidth(100);
-        tableInfo.getColumns().add(columnName);
         tableInfo.setPrefWidth(150);
 
     }
