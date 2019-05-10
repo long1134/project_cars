@@ -4,12 +4,16 @@ import com.jfoenix.controls.JFXButton;
 import com.jfoenix.controls.JFXTreeTableView;
 import info.Car;
 import javafx.application.Platform;
+import javafx.beans.property.ReadOnlyStringWrapper;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
+import javafx.scene.control.TreeItem;
+import javafx.scene.control.TreeTableColumn;
+import javafx.scene.control.TreeTableView;
 import javafx.scene.effect.DropShadow;
 import javafx.scene.image.ImageView;
 import javafx.scene.input.MouseEvent;
@@ -48,16 +52,27 @@ public class home implements Initializable {
     private AnchorPane popupLogout;
 
     @FXML
-    private JFXTreeTableView<?> TableListCarOld;
+    private TreeTableView<?> tableInfo;
 
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
+
         popupLogout.setVisible(false);
         Menu.setVisible(false);
         DropShadow drop_shadow = new DropShadow(10, Color.RED);
         Menu.setEffect(drop_shadow);
         newCar.setEffect(drop_shadow);
         oldCar.setEffect(drop_shadow);
+    }
+
+    public void initTable()
+    {
+        TreeItem<String> name = new TreeItem<>("Long vip");
+        TreeTableColumn<String,String> columnName = new TreeTableColumn<>("Name");
+        columnName.setPrefWidth(100);
+        tableInfo.getColumns().add(columnName);
+        tableInfo.setPrefWidth(150);
+
     }
 
 

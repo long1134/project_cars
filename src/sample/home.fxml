@@ -1,7 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <?import com.jfoenix.controls.JFXButton?>
-<?import com.jfoenix.controls.JFXTreeTableView?>
+<?import javafx.scene.control.TreeTableColumn?>
+<?import javafx.scene.control.TreeTableView?>
 <?import javafx.scene.image.Image?>
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
@@ -127,7 +128,12 @@
                   <Font size="15.0" />
                </font>
             </JFXButton>
-            <JFXTreeTableView fx:id="TableListCarOld" layoutX="169.0" layoutY="128.0" prefHeight="343.0" prefWidth="482.0" />
+            <TreeTableView fx:id="tableInfo" layoutX="147.0" layoutY="117.0" prefHeight="368.0" prefWidth="509.0">
+              <columns>
+                <TreeTableColumn prefWidth="75.0" text="C1" />
+                <TreeTableColumn prefWidth="75.0" text="C2" />
+              </columns>
+            </TreeTableView>
             </children>
         </AnchorPane>
     </children>
