@@ -14,6 +14,7 @@ import javafx.scene.Scene;
 import javafx.scene.control.TreeItem;
 import javafx.scene.control.TreeTableColumn;
 import javafx.scene.control.TreeTableView;
+import javafx.scene.control.cell.TreeItemPropertyValueFactory;
 import javafx.scene.effect.DropShadow;
 import javafx.scene.image.ImageView;
 import javafx.scene.input.MouseEvent;
@@ -52,7 +53,7 @@ public class home implements Initializable {
     private AnchorPane popupLogout;
 
     @FXML
-    private TreeTableView<?> tableInfo;
+    private TreeTableView<String> tableInfo;
 
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
@@ -63,13 +64,15 @@ public class home implements Initializable {
         Menu.setEffect(drop_shadow);
         newCar.setEffect(drop_shadow);
         oldCar.setEffect(drop_shadow);
+        initTable();
     }
 
     public void initTable()
     {
         TreeItem<String> name = new TreeItem<>("Long vip");
         TreeTableColumn<String,String> columnName = new TreeTableColumn<>("Name");
-        columnName.setPrefWidth(100);
+        columnName.setCellValueFactory(new TreeItemPropertyValueFactory<String,String>("Name"));
+        tableInfo.setRoot(name);
         tableInfo.setPrefWidth(150);
 
     }
@@ -115,4 +118,13 @@ public class home implements Initializable {
         stage.setScene(new Scene(root,601,506));
         stage.show();
     }
+
+    public void handleCustomer() throws IOException{
+//      FXMLLoader fXMLLoader;
+        Parent root =FXMLLoader.load(getClass().getResource("/sample/customers.fxml"));     Stage stage=stageService.mainStage;
+        stage.setOnCloseRequest(e->Platform.exit());
+        stage.setScene(new Scene(root,671,506));
+        stage.show();
+    }
+
 }

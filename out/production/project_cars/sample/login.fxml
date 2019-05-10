@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXBadge?>
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXCheckBox?>
+<?import com.jfoenix.controls.JFXPasswordField?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" style="-fx-background-color: white;" xmlns="http://javafx.com/javafx/10.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.login">
+   <children>
+      <JFXBadge layoutX="137.0" layoutY="180.0" />
+      <JFXButton fx:id="btnLogin" layoutX="335.0" layoutY="257.0" minWidth="100.0" onAction="#loginAction" prefHeight="30.0" prefWidth="85.0" style="-fx-background-color: #003973;" text="Login" textFill="WHITE">
+         <cursor>
+            <Cursor fx:constant="DEFAULT" />
+         </cursor></JFXButton>
+      <JFXTextField fx:id="Username" focusColor="#432e8a" labelFloat="true" layoutX="193.0" layoutY="129.0" prefHeight="30.0" prefWidth="228.0" promptText="Username" style="-fx-background-color: white;" unFocusColor="BLACK">
+         <font>
+            <Font size="14.0" />
+         </font>
+         <cursor>
+            <Cursor fx:constant="DEFAULT" />
+         </cursor></JFXTextField>
+      <JFXPasswordField fx:id="Password" layoutX="193.0" layoutY="187.0" prefHeight="30.0" prefWidth="228.0" promptText="Password" unFocusColor="BLACK">
+         <font>
+            <Font size="14.0" />
+         </font></JFXPasswordField>
+      <JFXCheckBox fx:id="BoxRem" layoutX="199.0" layoutY="261.0" prefHeight="18.0" prefWidth="116.0" text="Remember Me" textFill="#a0a2ab" />
+      <ImageView fitHeight="114.0" fitWidth="193.0" layoutX="244.0" layoutY="5.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../img/90359845-car-circle-icon-black-round-minimalist-icon-isolated-on-white-background-car-simple-silhouette-web-s.jpg" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="30.0" fitWidth="32.0" layoutX="147.0" layoutY="129.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../img/user.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="30.0" fitWidth="30.0" layoutX="149.0" layoutY="187.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../img/tải%20xuống.png" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="progress" fitHeight="51.0" fitWidth="71.0" layoutX="274.0" layoutY="320.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../img/Dual%20Ring-1s-200px.gif" />
+         </image>
+      </ImageView>
+   </children>
+</AnchorPane>

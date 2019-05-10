@@ -65,6 +65,8 @@ public class login implements Initializable {
         stage.show();
     }
 
+
+
     public boolean checkLogin(String username, String password)
     {
         if(!username.equals("admin") && !password.equals("admin"))
@@ -75,7 +77,8 @@ public class login implements Initializable {
     }
 
     @Override
-    public void initialize(URL url, ResourceBundle resourceBundle) {
+    public void initialize(URL url, ResourceBundle resourceBundle)
+    {
         progress.setVisible(false);
     }
 }
