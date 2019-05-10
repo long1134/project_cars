@@ -59,7 +59,7 @@ public class login implements Initializable {
 
     public void login() throws IOException{
         Parent root = FXMLLoader.load(getClass().getResource("/sample/home.fxml"));
-        Stage stage = new Stage();
+        Stage stage = stageService.mainStage;
         stage.setOnCloseRequest(a -> Platform.exit());
         stage.setScene(new Scene(root,671,506));
         stage.show();

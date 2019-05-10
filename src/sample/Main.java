@@ -13,6 +13,8 @@ import javafx.scene.Scene;
 import javafx.scene.image.ImageView;
 import javafx.stage.Stage;
 
+import static controller.stageService.*;
+
 import java.io.IOException;
 
 public class Main extends Application {
@@ -39,6 +41,7 @@ public class Main extends Application {
         primaryStage.setScene(new Scene(root, 602, 506));
         primaryStage.show();
         primaryStage.setOnCloseRequest(e -> Platform.exit());
+        mainStage = primaryStage;
     }
 
     public static void main(String[] args) {

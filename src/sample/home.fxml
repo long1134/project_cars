@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXTreeTableView?>
 <?import javafx.scene.image.Image?>
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
@@ -76,42 +77,6 @@
                      </image>
                   </ImageView>
                </children></AnchorPane>
-            <JFXButton alignment="BOTTOM_CENTER" contentDisplay="TOP" layoutX="141.0" layoutY="80.0" prefHeight="190.0" prefWidth="231.0" style="-fx-background-color: #373c4f;" text="Mercedes" textAlignment="CENTER" textFill="WHITE">
-               <font>
-                  <Font size="20.0" />
-               </font>
-               <graphic>
-                  <ImageView fitHeight="147.0" fitWidth="210.0" pickOnBounds="true" preserveRatio="true">
-                     <image>
-                        <Image url="@../img/chi-tiet-xe-mercedes-c-class-2018-viet-nam-tuvanmuaxe_vn-2.jpg" />
-                     </image>
-                  </ImageView>
-               </graphic>
-            </JFXButton>
-            <JFXButton alignment="BOTTOM_CENTER" contentDisplay="TOP" layoutX="412.0" layoutY="80.0" prefHeight="190.0" prefWidth="231.0" style="-fx-background-color: #373c4f;" text="BMW" textAlignment="CENTER" textFill="WHITE">
-               <font>
-                  <Font size="20.0" />
-               </font>
-               <graphic>
-                  <ImageView fitHeight="147.0" fitWidth="210.0" pickOnBounds="true" preserveRatio="true">
-                     <image>
-                        <Image url="@../img/BMW_Group-1-1.jpg" />
-                     </image>
-                  </ImageView>
-               </graphic>
-            </JFXButton>
-            <JFXButton alignment="BOTTOM_CENTER" contentDisplay="TOP" layoutX="278.0" layoutY="301.0" prefHeight="190.0" prefWidth="231.0" style="-fx-background-color: #373c4f;" text="Charvolet" textAlignment="CENTER" textFill="WHITE">
-               <font>
-                  <Font size="20.0" />
-               </font>
-               <graphic>
-                  <ImageView fitHeight="147.0" fitWidth="210.0" pickOnBounds="true" preserveRatio="true">
-                     <image>
-                        <Image url="@../img/2017-chevrolet-malibu-trims.jpg" />
-                     </image>
-                  </ImageView>
-               </graphic>
-            </JFXButton>
             <AnchorPane fx:id="Menu" layoutX="541.0" layoutY="30.0" prefHeight="106.0" prefWidth="126.0" style="-fx-background-color: white;">
                <children>
                   <JFXButton fx:id="btnLogout" alignment="CENTER" layoutX="12.0" layoutY="14.0" onAction="#openPopupLogout" onMouseEntered="#hoverMenu" prefHeight="35.0" prefWidth="102.0" style="-fx-background-color: #ECECEC;" text="Log out">
@@ -134,7 +99,7 @@
                   </JFXButton>
                </children>
             </AnchorPane>
-            <AnchorPane fx:id="popupLogout" layoutX="229.0" layoutY="43.0" prefHeight="200.0" prefWidth="278.0" style="-fx-background-color: white;">
+            <AnchorPane fx:id="popupLogout" layoutX="229.0" layoutY="43.0" prefHeight="200.0" prefWidth="278.0" style="-fx-background-color: white; visibility: false;">
                <children>
                   <Text layoutX="32.0" layoutY="64.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Do You Sure To Logout" wrappingWidth="217.98301124572754">
                      <font>
@@ -152,6 +117,17 @@
                      </font>
                   </JFXButton>
                </children></AnchorPane>
+            <JFXButton fx:id="newCar" layoutX="169.0" layoutY="63.0" prefHeight="32.0" prefWidth="120.0" style="-fx-background-color: red;" text="Xe Mới" textFill="WHITE">
+               <font>
+                  <Font size="15.0" />
+               </font>
+            </JFXButton>
+            <JFXButton fx:id="oldCar" layoutX="337.0" layoutY="63.0" prefHeight="32.0" prefWidth="120.0" style="-fx-background-color: #97cc76;" text="Xe Cũ" textFill="WHITE">
+               <font>
+                  <Font size="15.0" />
+               </font>
+            </JFXButton>
+            <JFXTreeTableView fx:id="TableListCarOld" layoutX="169.0" layoutY="128.0" prefHeight="343.0" prefWidth="482.0" />
             </children>
         </AnchorPane>
     </children>

@@ -1,6 +1,8 @@
 package controller;
 
 import com.jfoenix.controls.JFXButton;
+import com.jfoenix.controls.JFXTreeTableView;
+import info.Car;
 import javafx.application.Platform;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
@@ -37,8 +39,16 @@ public class home implements Initializable {
 
 
     @FXML
+    private JFXButton newCar;
+
+    @FXML
+    private JFXButton oldCar;
+
+    @FXML
     private AnchorPane popupLogout;
 
+    @FXML
+    private JFXTreeTableView<?> TableListCarOld;
 
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
@@ -46,6 +56,8 @@ public class home implements Initializable {
         Menu.setVisible(false);
         DropShadow drop_shadow = new DropShadow(10, Color.RED);
         Menu.setEffect(drop_shadow);
+        newCar.setEffect(drop_shadow);
+        oldCar.setEffect(drop_shadow);
     }
 
 
@@ -84,7 +96,7 @@ public class home implements Initializable {
     @FXML
     void logoutLogin(ActionEvent event) throws IOException {
         Parent root = FXMLLoader.load(getClass().getResource("/sample/login.fxml"));
-        Stage stage = new Stage();
+        Stage stage = stageService.mainStage;
         stage.setOnHidden(a -> Platform.exit());
         stage.setScene(new Scene(root,601,506));
         stage.show();
