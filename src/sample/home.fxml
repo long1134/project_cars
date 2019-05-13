@@ -118,23 +118,37 @@
                      </font>
                   </JFXButton>
                </children></AnchorPane>
-            <JFXButton fx:id="newCar" layoutX="169.0" layoutY="63.0" prefHeight="32.0" prefWidth="120.0" style="-fx-background-color: red;" text="Xe Mới" textFill="WHITE">
+            <JFXButton fx:id="newCar" layoutX="147.0" layoutY="63.0" onAction="#showNewCar" prefHeight="32.0" prefWidth="120.0" style="-fx-background-color: red;" text="Xe Mới" textFill="WHITE">
                <font>
                   <Font size="15.0" />
                </font>
             </JFXButton>
-            <JFXButton fx:id="oldCar" layoutX="337.0" layoutY="63.0" prefHeight="32.0" prefWidth="120.0" style="-fx-background-color: #97cc76;" text="Xe Cũ" textFill="WHITE">
+            <JFXButton fx:id="oldCar" layoutX="295.0" layoutY="63.0" onAction="#showOldCar" prefHeight="32.0" prefWidth="120.0" style="-fx-background-color: #97cc76;" text="Xe Cũ" textFill="WHITE">
                <font>
                   <Font size="15.0" />
                </font>
             </JFXButton>
-            <TreeTableView fx:id="tableInfo" layoutX="147.0" layoutY="117.0" prefHeight="368.0" prefWidth="509.0">
-              <columns>
-                <TreeTableColumn prefWidth="75.0" text="C1" />
-                <TreeTableColumn prefWidth="75.0" text="C2" />
-              </columns>
-            </TreeTableView>
+            <TreeTableView fx:id="tableInfo" layoutX="147.0" layoutY="117.0" prefHeight="368.0" prefWidth="451.0">
+               <columns>
+                  <TreeTableColumn fx:id="CarName" prefWidth="75.0" text="Tên Xe" />
+                  <TreeTableColumn fx:id="CarBrand" prefWidth="75.0" text="Hãng Xe" />
+                  <TreeTableColumn fx:id="Price" prefWidth="75.0" text="Giá" />
+                  <TreeTableColumn fx:id="DayCar" prefWidth="75.0" text="Ngày Nhập" />
+                  <TreeTableColumn fx:id="guarantee" prefWidth="75.0" text="Bảo Hành" />
+                  <TreeTableColumn fx:id="Quantity" prefWidth="75.0" text="Số Lượng" />
+               </columns></TreeTableView>
             </children>
         </AnchorPane>
+      <TreeTableView fx:id="tableInfoOldCar" layoutX="146.0" layoutY="118.0" prefHeight="378.0" prefWidth="519.0" style="visibility: false;">
+         <columns>
+            <TreeTableColumn fx:id="CarNameOld" prefWidth="75.0" text="Tên Xe" />
+            <TreeTableColumn fx:id="CarBrandOld" prefWidth="75.0" text="Hãng Xe" />
+            <TreeTableColumn fx:id="PriceOld" prefWidth="75.0" text="Giá" />
+            <TreeTableColumn fx:id="DayCarOld" prefWidth="75.0" text="Ngày Nhập" />
+            <TreeTableColumn fx:id="guaranteeOld" prefWidth="75.0" text="Bảo Hành" />
+            <TreeTableColumn fx:id="QuantityOld" prefWidth="75.0" text="Số Lượng" />
+            <TreeTableColumn fx:id="KMOld" prefWidth="75.0" text="Số KM" />
+         </columns>
+      </TreeTableView>
     </children>
 </AnchorPane>
