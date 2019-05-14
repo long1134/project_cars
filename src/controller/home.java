@@ -49,6 +49,8 @@ public class home implements Initializable {
     @FXML
     private JFXButton btnInFo;
 
+    @FXML
+    private JFXButton RentBtn;
 
     @FXML
     private JFXButton newCar;
@@ -188,14 +190,23 @@ public class home implements Initializable {
         stage.setScene(new Scene(root,601,506));
         stage.show();
     }
-
-    public void handleCustomer() throws IOException{
-//      FXMLLoader fXMLLoader;
-        Parent root =FXMLLoader.load(getClass().getResource("/sample/customers.fxml"));     Stage stage=stageService.mainStage;
+    @FXML
+    public void handleCustomer(ActionEvent event) throws IOException{
+        Parent root =FXMLLoader.load(getClass().getResource("/sample/customers.fxml"));
+        Stage stage=stageService.mainStage;
         stage.setOnCloseRequest(e->Platform.exit());
         stage.setScene(new Scene(root,671,506));
         stage.show();
     }
+    @FXML
+    public void handleRenting(ActionEvent event) throws IOException{
+        Parent root =FXMLLoader.load(getClass().getResource("/sample/rentingCar.fxml"));
+        Stage stage=stageService.mainStage;
+        stage.setOnCloseRequest(e->Platform.exit());
+        stage.setScene(new Scene(root,671,506));
+        stage.show();
+    }
+
 
     //show list old car
     public void showOldCar()
@@ -213,5 +224,16 @@ public class home implements Initializable {
         oldCar.setStyle("-fx-background-color:  #97cc76");
         tableInfoOldCar.setVisible(false);
         tableInfo.setVisible(true);
+
     }
+
+
+//    public void handleCustomers() throws IOException{
+//        Parent root = FXMLLoader.load(getClass().getResource("/sample/customers.fxml"));
+//        Stage stage = stageService.mainStage;
+//        stage.setOnCloseRequest(a -> Platform.exit());
+//        stage.setScene(new Scene(root,671,506));
+//        stage.show();
+//    }
+
 }

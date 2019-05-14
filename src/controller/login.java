@@ -69,10 +69,10 @@ public class login implements Initializable {
 
     public boolean checkLogin(String username, String password)
     {
-        if(!username.equals("admin") && !password.equals("admin"))
-        {
-            return false;
-        }
+//        if(!username.equals("admin") && !password.equals("admin"))
+//        {
+//            return false;
+//        }
         return true;
     }
 
