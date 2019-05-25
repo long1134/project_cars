@@ -58,10 +58,10 @@ public class login implements Initializable {
     }
 
     public void login() throws IOException{
-        Parent root = FXMLLoader.load(getClass().getResource("/AdminFXML/Car.fxml"));
+        Parent root = FXMLLoader.load(getClass().getResource("/sample/home.fxml"));
         Stage stage = stageService.mainStage;
         stage.setOnCloseRequest(a -> Platform.exit());
-        stage.setScene(new Scene(root));
+        stage.setScene(new Scene(root,671,506));
         stage.show();
     }
 
@@ -69,10 +69,10 @@ public class login implements Initializable {
 
     public boolean checkLogin(String username, String password)
     {
-        if(!username.equals("admin") && !password.equals("admin"))
-        {
-            return false;
-        }
+//        if(!username.equals("admin") && !password.equals("admin"))
+//        {
+//            return false;
+//        }
         return true;
     }
 
