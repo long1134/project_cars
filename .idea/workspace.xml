@@ -2,167 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="34fe2a34-0b8c-4e85-a204-2e58cd46f85d" name="Default Changelist" comment="create customer">
-      <change afterPath="$PROJECT_DIR$/out/production/project_cars/AdminFXML/Car.fxml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/project_cars/META-INF/project_cars.kotlin_module" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/project_cars/controller/listOrder.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/project_cars/controllerAdmin/CarAdminControll.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/project_cars/img/(51) set z-orderin javafx - YouTube.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/project_cars/img/(51) set z-orderin javafx - YouTube_files/annotations_module.js.tải xuống" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/project_cars/img/(51) set z-orderin javafx - YouTube_files/base.js.tải xuống" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/project_cars/img/(51) set z-orderin javafx - YouTube_files/captions.js.tải xuống" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/project_cars/img/(51) set z-orderin javafx - YouTube_files/css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/project_cars/img/(51) set z-orderin javafx - YouTube_files/css(1)" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/project_cars/img/(51) set z-orderin javafx - YouTube_files/css(2)" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/project_cars/img/(51) set z-orderin javafx - YouTube_files/custom-elements-es5-adapter.js.tải xuống" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/project_cars/img/(51) set z-orderin javafx - YouTube_files/desktop_polymer_sel_auto_svg_home_v2.js.tải xuống" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/project_cars/img/(51) set z-orderin javafx - YouTube_files/endscreen.js.tải xuống" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/project_cars/img/(51) set z-orderin javafx - YouTube_files/heartbeat.js.tải xuống" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/project_cars/img/(51) set z-orderin javafx - YouTube_files/hqdefault(1).jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/project_cars/img/(51) set z-orderin javafx - YouTube_files/hqdefault(10).jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/project_cars/img/(51) set z-orderin javafx - YouTube_files/hqdefault(11).jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/project_cars/img/(51) set z-orderin javafx - YouTube_files/hqdefault(12).jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/project_cars/img/(51) set z-orderin javafx - YouTube_files/hqdefault(13).jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/project_cars/img/(51) set z-orderin javafx - YouTube_files/hqdefault(14).jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/project_cars/img/(51) set z-orderin javafx - YouTube_files/hqdefault(15).jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/project_cars/img/(51) set z-orderin javafx - YouTube_files/hqdefault(16).jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/project_cars/img/(51) set z-orderin javafx - YouTube_files/hqdefault(17).jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/project_cars/img/(51) set z-orderin javafx - YouTube_files/hqdefault(18).jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/project_cars/img/(51) set z-orderin javafx - YouTube_files/hqdefault(19).jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/project_cars/img/(51) set z-orderin javafx - YouTube_files/hqdefault(2).jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/project_cars/img/(51) set z-orderin javafx - YouTube_files/hqdefault(20).jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/project_cars/img/(51) set z-orderin javafx - YouTube_files/hqdefault(21).jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/project_cars/img/(51) set z-orderin javafx - YouTube_files/hqdefault(22).jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/project_cars/img/(51) set z-orderin javafx - YouTube_files/hqdefault(23).jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/project_cars/img/(51) set z-orderin javafx - YouTube_files/hqdefault(24).jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/project_cars/img/(51) set z-orderin javafx - YouTube_files/hqdefault(25).jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/project_cars/img/(51) set z-orderin javafx - YouTube_files/hqdefault(26).jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/project_cars/img/(51) set z-orderin javafx - YouTube_files/hqdefault(27).jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/project_cars/img/(51) set z-orderin javafx - YouTube_files/hqdefault(28).jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/project_cars/img/(51) set z-orderin javafx - YouTube_files/hqdefault(3).jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/project_cars/img/(51) set z-orderin javafx - YouTube_files/hqdefault(4).jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/project_cars/img/(51) set z-orderin javafx - YouTube_files/hqdefault(5).jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/project_cars/img/(51) set z-orderin javafx - YouTube_files/hqdefault(6).jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/project_cars/img/(51) set z-orderin javafx - YouTube_files/hqdefault(7).jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/project_cars/img/(51) set z-orderin javafx - YouTube_files/hqdefault(8).jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/project_cars/img/(51) set z-orderin javafx - YouTube_files/hqdefault(9).jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/project_cars/img/(51) set z-orderin javafx - YouTube_files/hqdefault.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/project_cars/img/(51) set z-orderin javafx - YouTube_files/hqdefault_live(1).jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/project_cars/img/(51) set z-orderin javafx - YouTube_files/hqdefault_live(2).jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/project_cars/img/(51) set z-orderin javafx - YouTube_files/hqdefault_live.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/project_cars/img/(51) set z-orderin javafx - YouTube_files/miniplayer.js.tải xuống" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/project_cars/img/(51) set z-orderin javafx - YouTube_files/network.js.tải xuống" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/project_cars/img/(51) set z-orderin javafx - YouTube_files/remote.js.tải xuống" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/project_cars/img/(51) set z-orderin javafx - YouTube_files/saved_resource(1).html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/project_cars/img/(51) set z-orderin javafx - YouTube_files/saved_resource.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/project_cars/img/(51) set z-orderin javafx - YouTube_files/scheduler.js.tải xuống" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/project_cars/img/(51) set z-orderin javafx - YouTube_files/sddefault(1).jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/project_cars/img/(51) set z-orderin javafx - YouTube_files/sddefault.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/project_cars/img/(51) set z-orderin javafx - YouTube_files/spf.js.tải xuống" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/project_cars/img/(51) set z-orderin javafx - YouTube_files/tia.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/project_cars/img/(51) set z-orderin javafx - YouTube_files/unnamed(1).jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/project_cars/img/(51) set z-orderin javafx - YouTube_files/unnamed(10).jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/project_cars/img/(51) set z-orderin javafx - YouTube_files/unnamed(11).jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/project_cars/img/(51) set z-orderin javafx - YouTube_files/unnamed(2).jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/project_cars/img/(51) set z-orderin javafx - YouTube_files/unnamed(3).jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/project_cars/img/(51) set z-orderin javafx - YouTube_files/unnamed(4).jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/project_cars/img/(51) set z-orderin javafx - YouTube_files/unnamed(5).jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/project_cars/img/(51) set z-orderin javafx - YouTube_files/unnamed(6).jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/project_cars/img/(51) set z-orderin javafx - YouTube_files/unnamed(7).jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/project_cars/img/(51) set z-orderin javafx - YouTube_files/unnamed(8).jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/project_cars/img/(51) set z-orderin javafx - YouTube_files/unnamed(9).jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/project_cars/img/(51) set z-orderin javafx - YouTube_files/unnamed.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/project_cars/img/(51) set z-orderin javafx - YouTube_files/web-animations-next-lite.min.js.tải xuống" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/project_cars/img/(51) set z-orderin javafx - YouTube_files/webcomponents-sd.js.tải xuống" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/project_cars/img/(51) set z-orderin javafx - YouTube_files/www-main-desktop-home-page-skeleton-2x-webp-vflM-Sed0.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/project_cars/img/(51) set z-orderin javafx - YouTube_files/www-main-desktop-watch-page-skeleton-2x-webp-vflQ9GNSj.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/project_cars/img/(51) set z-orderin javafx - YouTube_files/www-onepick-2x-webp-vflsYL2Tr.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/project_cars/img/(51) set z-orderin javafx - YouTube_files/www-player-2x-webp.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/project_cars/img/(51) set z-orderin javafx - YouTube_files/www-prepopulator.js.tải xuống" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/project_cars/img/(51) set z-orderin javafx - YouTube_files/www-tampering.js.tải xuống" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/project_cars/img/(51) set z-orderin javafx - YouTube_files/www-widgetapi.js.tải xuống" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/project_cars/info/CarAdmin.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/project_cars/info/OrderBuyingCar.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/project_cars/info/OrderRentingCar.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/project_cars/sample/listOrder.fxml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/project_cars/services/OrderBuyingCarServices.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/project_cars/services/OrderRentingCarServices.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/project_cars/services/customerServices.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/img/(51) set z-orderin javafx - YouTube.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/img/(51) set z-orderin javafx - YouTube_files/annotations_module.js.tải xuống" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/img/(51) set z-orderin javafx - YouTube_files/base.js.tải xuống" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/img/(51) set z-orderin javafx - YouTube_files/captions.js.tải xuống" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/img/(51) set z-orderin javafx - YouTube_files/css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/img/(51) set z-orderin javafx - YouTube_files/css(1)" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/img/(51) set z-orderin javafx - YouTube_files/css(2)" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/img/(51) set z-orderin javafx - YouTube_files/custom-elements-es5-adapter.js.tải xuống" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/img/(51) set z-orderin javafx - YouTube_files/desktop_polymer_sel_auto_svg_home_v2.js.tải xuống" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/img/(51) set z-orderin javafx - YouTube_files/endscreen.js.tải xuống" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/img/(51) set z-orderin javafx - YouTube_files/heartbeat.js.tải xuống" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/img/(51) set z-orderin javafx - YouTube_files/hqdefault(1).jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/img/(51) set z-orderin javafx - YouTube_files/hqdefault(10).jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/img/(51) set z-orderin javafx - YouTube_files/hqdefault(11).jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/img/(51) set z-orderin javafx - YouTube_files/hqdefault(12).jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/img/(51) set z-orderin javafx - YouTube_files/hqdefault(13).jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/img/(51) set z-orderin javafx - YouTube_files/hqdefault(14).jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/img/(51) set z-orderin javafx - YouTube_files/hqdefault(15).jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/img/(51) set z-orderin javafx - YouTube_files/hqdefault(16).jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/img/(51) set z-orderin javafx - YouTube_files/hqdefault(17).jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/img/(51) set z-orderin javafx - YouTube_files/hqdefault(18).jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/img/(51) set z-orderin javafx - YouTube_files/hqdefault(19).jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/img/(51) set z-orderin javafx - YouTube_files/hqdefault(2).jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/img/(51) set z-orderin javafx - YouTube_files/hqdefault(20).jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/img/(51) set z-orderin javafx - YouTube_files/hqdefault(21).jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/img/(51) set z-orderin javafx - YouTube_files/hqdefault(22).jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/img/(51) set z-orderin javafx - YouTube_files/hqdefault(23).jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/img/(51) set z-orderin javafx - YouTube_files/hqdefault(24).jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/img/(51) set z-orderin javafx - YouTube_files/hqdefault(25).jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/img/(51) set z-orderin javafx - YouTube_files/hqdefault(26).jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/img/(51) set z-orderin javafx - YouTube_files/hqdefault(27).jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/img/(51) set z-orderin javafx - YouTube_files/hqdefault(28).jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/img/(51) set z-orderin javafx - YouTube_files/hqdefault(3).jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/img/(51) set z-orderin javafx - YouTube_files/hqdefault(4).jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/img/(51) set z-orderin javafx - YouTube_files/hqdefault(5).jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/img/(51) set z-orderin javafx - YouTube_files/hqdefault(6).jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/img/(51) set z-orderin javafx - YouTube_files/hqdefault(7).jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/img/(51) set z-orderin javafx - YouTube_files/hqdefault(8).jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/img/(51) set z-orderin javafx - YouTube_files/hqdefault(9).jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/img/(51) set z-orderin javafx - YouTube_files/hqdefault.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/img/(51) set z-orderin javafx - YouTube_files/hqdefault_live(1).jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/img/(51) set z-orderin javafx - YouTube_files/hqdefault_live(2).jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/img/(51) set z-orderin javafx - YouTube_files/hqdefault_live.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/img/(51) set z-orderin javafx - YouTube_files/miniplayer.js.tải xuống" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/img/(51) set z-orderin javafx - YouTube_files/network.js.tải xuống" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/img/(51) set z-orderin javafx - YouTube_files/remote.js.tải xuống" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/img/(51) set z-orderin javafx - YouTube_files/saved_resource(1).html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/img/(51) set z-orderin javafx - YouTube_files/saved_resource.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/img/(51) set z-orderin javafx - YouTube_files/scheduler.js.tải xuống" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/img/(51) set z-orderin javafx - YouTube_files/sddefault(1).jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/img/(51) set z-orderin javafx - YouTube_files/sddefault.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/img/(51) set z-orderin javafx - YouTube_files/spf.js.tải xuống" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/img/(51) set z-orderin javafx - YouTube_files/tia.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/img/(51) set z-orderin javafx - YouTube_files/unnamed(1).jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/img/(51) set z-orderin javafx - YouTube_files/unnamed(10).jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/img/(51) set z-orderin javafx - YouTube_files/unnamed(11).jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/img/(51) set z-orderin javafx - YouTube_files/unnamed(2).jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/img/(51) set z-orderin javafx - YouTube_files/unnamed(3).jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/img/(51) set z-orderin javafx - YouTube_files/unnamed(4).jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/img/(51) set z-orderin javafx - YouTube_files/unnamed(5).jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/img/(51) set z-orderin javafx - YouTube_files/unnamed(6).jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/img/(51) set z-orderin javafx - YouTube_files/unnamed(7).jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/img/(51) set z-orderin javafx - YouTube_files/unnamed(8).jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/img/(51) set z-orderin javafx - YouTube_files/unnamed(9).jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/img/(51) set z-orderin javafx - YouTube_files/unnamed.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/img/(51) set z-orderin javafx - YouTube_files/web-animations-next-lite.min.js.tải xuống" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/img/(51) set z-orderin javafx - YouTube_files/webcomponents-sd.js.tải xuống" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/img/(51) set z-orderin javafx - YouTube_files/www-main-desktop-home-page-skeleton-2x-webp-vflM-Sed0.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/img/(51) set z-orderin javafx - YouTube_files/www-main-desktop-watch-page-skeleton-2x-webp-vflQ9GNSj.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/img/(51) set z-orderin javafx - YouTube_files/www-onepick-2x-webp-vflsYL2Tr.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/img/(51) set z-orderin javafx - YouTube_files/www-player-2x-webp.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/img/(51) set z-orderin javafx - YouTube_files/www-prepopulator.js.tải xuống" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/img/(51) set z-orderin javafx - YouTube_files/www-tampering.js.tải xuống" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/img/(51) set z-orderin javafx - YouTube_files/www-widgetapi.js.tải xuống" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/project_cars/sample/customers.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/project_cars/sample/customers.fxml" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -177,25 +17,31 @@
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/controller/customers.java">
+        <entry file="file://$PROJECT_DIR$/src/sample/Controller.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="3120">
-              <caret line="130" column="49" selection-start-line="130" selection-end-line="131" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
+            <state relative-caret-position="120">
+              <caret line="11" selection-start-line="11" selection-end-line="11" />
             </state>
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/sample/rentingCar.fxml">
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/sample/customers.fxml">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="24">
-              <caret line="127" column="4" lean-forward="true" selection-start-line="127" selection-start-column="4" selection-end-line="127" selection-end-column="4" />
+            <state relative-caret-position="51">
+              <caret line="3" selection-start-line="3" selection-end-line="3" />
             </state>
           </provider>
           <provider editor-type-id="JavaFX-Scene-Builder" />
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/controller/customers.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state>
+              <caret line="3" column="1" selection-start-line="3" selection-start-column="1" selection-end-line="3" selection-end-column="1" />
+            </state>
+          </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
@@ -211,8 +57,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/controller/home.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="3984">
-              <caret line="166" selection-start-line="166" selection-end-line="166" />
+            <state relative-caret-position="3936">
+              <caret line="164" selection-start-line="164" selection-end-line="164" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -220,32 +66,29 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/controller/RentingCar.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="432">
-              <caret line="18" column="30" selection-start-line="18" selection-start-column="16" selection-end-line="18" selection-end-column="30" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/info/Car.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="432">
-              <caret line="18" column="5" selection-start-line="18" selection-start-column="5" selection-end-line="18" selection-end-column="5" />
+            <state relative-caret-position="283">
+              <caret line="13" column="30" lean-forward="true" selection-start-line="13" selection-start-column="30" selection-end-line="13" selection-end-column="30" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/info/Customer.java">
+        <entry file="file://$PROJECT_DIR$/src/info/CarOld.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="264">
-              <caret line="11" selection-start-line="11" selection-end-line="11" />
+            <state relative-caret-position="48">
+              <caret line="2" column="32" selection-start-line="2" selection-start-column="32" selection-end-line="2" selection-end-column="32" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/sample/Main.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="283">
+              <caret line="40" column="46" selection-start-line="40" selection-start-column="46" selection-end-line="40" selection-end-column="46" />
             </state>
           </provider>
         </entry>
@@ -290,9 +133,9 @@
     </option>
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="951" />
-    <option name="width" value="978" />
-    <option name="height" value="1039" />
+    <option name="x" value="950" />
+    <option name="width" value="979" />
+    <option name="height" value="1040" />
   </component>
   <component name="ProjectView">
     <navigator proportions="" version="1">
@@ -386,18 +229,35 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1557802490282</updated>
-      <workItem from="1558713100196" duration="249000" />
+      <workItem from="1558713100196" duration="1415000" />
     </task>
+    <task id="LOCAL-00001" summary="create customer">
+      <created>1558713619493</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1558713619494</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="249000" />
+    <option name="totallyTimeSpent" value="1415000" />
+  </component>
+  <component name="TodoView">
+    <todo-panel id="selected-file">
+      <is-autoscroll-to-source value="true" />
+    </todo-panel>
+    <todo-panel id="all">
+      <are-packages-shown value="true" />
+      <is-autoscroll-to-source value="true" />
+    </todo-panel>
   </component>
   <component name="ToolWindowManager">
     <frame x="-7" y="-7" width="1550" height="838" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.16308725" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.16308725" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Image Layers" order="2" />
       <window_info id="Designer" order="3" />
@@ -409,18 +269,19 @@
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
       <window_info anchor="bottom" id="Run" order="2" weight="0.3286119" />
-      <window_info active="true" anchor="bottom" id="Debug" order="3" visible="true" weight="0.4" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.04411765" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
-      <window_info anchor="bottom" id="TODO" order="6" />
+      <window_info anchor="bottom" id="TODO" order="6" weight="0.32941177" />
       <window_info anchor="bottom" id="Terminal" order="7" />
       <window_info anchor="bottom" id="Event Log" order="8" sideWeight="0.50067115" side_tool="true" weight="0.32794118" />
-      <window_info anchor="bottom" id="Version Control" order="9" sideWeight="0.49932885" weight="0.32794118" />
+      <window_info anchor="bottom" id="Version Control" order="9" sideWeight="0.49932885" weight="0.7014706" />
       <window_info anchor="bottom" id="Messages" order="10" />
       <window_info anchor="right" id="Codota" />
       <window_info anchor="right" id="Database" />
+      <window_info anchor="right" id="Coverage" side_tool="true" weight="0.3295302" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
-      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
+      <window_info anchor="right" id="Ant Build" order="1" weight="0.24966443" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
       <window_info anchor="right" id="Palette" order="3" />
       <window_info anchor="right" id="Maven" order="4" />
@@ -442,10 +303,40 @@
       </list>
     </option>
   </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State>
+              <option name="RECENTLY_FILTERED_USER_GROUPS">
+                <collection />
+              </option>
+              <option name="RECENTLY_FILTERED_BRANCH_GROUPS">
+                <collection />
+              </option>
+              <option name="COLUMN_ORDER">
+                <list>
+                  <option value="0" />
+                  <option value="1" />
+                  <option value="2" />
+                  <option value="3" />
+                </list>
+              </option>
+            </State>
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="create Admin" />
     <MESSAGE value="create customer" />
     <option name="LAST_COMMIT_MESSAGE" value="create customer" />
+  </component>
+  <component name="antWorkspaceConfiguration">
+    <option name="IS_AUTOSCROLL_TO_SOURCE" value="false" />
+    <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/project_cars$Main.ic" NAME="Main Coverage Results" MODIFIED="1558713496704" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
@@ -459,30 +350,12 @@
     <entry file="file://$PROJECT_DIR$/src/module-info.java">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/sample/Main.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="187">
-          <caret line="38" column="67" selection-start-line="38" selection-start-column="67" selection-end-line="38" selection-end-column="67" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/project_cars.iml">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
     <entry file="file://$PROJECT_DIR$/src/sample/login.fxml">
       <provider selected="true" editor-type-id="text-editor" />
       <provider editor-type-id="JavaFX-Scene-Builder" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/info/CusVip.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret column="13" lean-forward="true" selection-start-column="13" selection-end-column="13" />
-          <folding>
-            <element signature="e#131#132#0" expanded="true" />
-            <element signature="e#175#176#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/controller/login.java">
       <provider selected="true" editor-type-id="text-editor">
@@ -491,43 +364,11 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/info/CarOld.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="136">
-          <caret line="8" column="5" selection-start-line="8" selection-start-column="5" selection-end-line="8" selection-end-column="5" />
-        </state>
-      </provider>
-    </entry>
     <entry file="jar://E:/javafx-sdk-11.0.2/lib/javafx.fxml.jar!/javafx/fxml/FXMLLoader.class" />
-    <entry file="file://$PROJECT_DIR$/src/sample/customers.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret column="14" selection-start-column="14" selection-end-column="14" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/sample/customers.fxml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="51">
-          <caret line="3" selection-start-line="3" selection-end-line="3" />
-        </state>
-      </provider>
-      <provider editor-type-id="JavaFX-Scene-Builder" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/sample/Controller.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="85">
-          <caret line="11" lean-forward="true" selection-start-line="11" selection-end-line="11" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/controller/customers.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="3120">
-          <caret line="130" column="49" selection-start-line="130" selection-end-line="131" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
+        <state>
+          <caret line="3" column="1" selection-start-line="3" selection-start-column="1" selection-end-line="3" selection-end-column="1" />
         </state>
       </provider>
     </entry>
@@ -541,8 +382,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/controller/home.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="3984">
-          <caret line="166" selection-start-line="166" selection-end-line="166" />
+        <state relative-caret-position="3936">
+          <caret line="164" selection-start-line="164" selection-end-line="164" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
@@ -559,27 +400,74 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/info/Car.java">
+    <entry file="file://$PROJECT_DIR$/src/sample/rentingCar.fxml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="432">
-          <caret line="18" column="5" selection-start-line="18" selection-start-column="5" selection-end-line="18" selection-end-column="5" />
+        <state relative-caret-position="94">
+          <caret line="136" column="57" selection-start-line="136" selection-start-column="57" selection-end-line="136" selection-end-column="57" />
+        </state>
+      </provider>
+      <provider editor-type-id="JavaFX-Scene-Builder" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/info/CusVip.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="48">
+          <caret line="2" column="13" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="13" />
+          <folding>
+            <element signature="e#131#132#0" expanded="true" />
+            <element signature="e#176#177#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/sample/customers.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret column="14" selection-start-column="14" selection-end-column="14" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/sample/Controller.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="120">
+          <caret line="11" selection-start-line="11" selection-end-line="11" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/sample/customers.fxml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="51">
+          <caret line="3" selection-start-line="3" selection-end-line="3" />
+        </state>
+      </provider>
+      <provider editor-type-id="JavaFX-Scene-Builder" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/sample/Main.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="283">
+          <caret line="40" column="46" selection-start-line="40" selection-start-column="46" selection-end-line="40" selection-end-column="46" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/info/CarOld.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="48">
+          <caret line="2" column="32" selection-start-line="2" selection-start-column="32" selection-end-line="2" selection-end-column="32" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/info/Customer.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="264">
+        <state relative-caret-position="258">
           <caret line="11" selection-start-line="11" selection-end-line="11" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/sample/rentingCar.fxml">
+    <entry file="file://$PROJECT_DIR$/src/info/Car.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="24">
-          <caret line="127" column="4" lean-forward="true" selection-start-line="127" selection-start-column="4" selection-end-line="127" selection-end-column="4" />
+        <state relative-caret-position="283">
+          <caret line="13" column="30" lean-forward="true" selection-start-line="13" selection-start-column="30" selection-end-line="13" selection-end-column="30" />
         </state>
       </provider>
-      <provider editor-type-id="JavaFX-Scene-Builder" />
     </entry>
   </component>
 </project>
