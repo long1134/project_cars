@@ -1,11 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <?import com.jfoenix.controls.JFXButton?>
-<?import javafx.scene.control.CheckBox?>
-<?import javafx.scene.control.Label?>
-<?import javafx.scene.control.TableColumn?>
-<?import javafx.scene.control.TableView?>
-<?import javafx.scene.control.TextField?>
 <?import javafx.scene.control.TreeTableColumn?>
 <?import javafx.scene.control.TreeTableView?>
 <?import javafx.scene.image.Image?>
@@ -16,9 +11,9 @@
 
 <AnchorPane prefHeight="506.0" prefWidth="602.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.RentingCar">
    <children>
-      <AnchorPane layoutX="-9.0" prefHeight="519.0" prefWidth="683.0">
+      <AnchorPane prefHeight="506.0" prefWidth="671.0">
          <children>
-            <AnchorPane prefHeight="519.0" prefWidth="125.0" style="-fx-background-color: #36394b;">
+            <AnchorPane prefHeight="506.0" prefWidth="125.0" style="-fx-background-color: #36394b;">
                <children>
                   <ImageView fitHeight="49.0" fitWidth="35.0" layoutX="45.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true">
                      <image>
@@ -77,7 +72,7 @@
             </AnchorPane>
             <AnchorPane layoutX="120.0" prefHeight="43.0" prefWidth="554.0" style="-fx-background-color: #36394b;">
                <children>
-                  <ImageView fx:id="menuIcon" fitHeight="27.0" fitWidth="52.0" layoutX="497.0" layoutY="8.0" pickOnBounds="true" preserveRatio="true">
+                  <ImageView fx:id="menuIcon" fitHeight="27.0" fitWidth="52.0" layoutX="497.0" layoutY="8.0"  pickOnBounds="true" preserveRatio="true">
                      <image>
                         <Image url="@../img/menu.png" />
                      </image>
@@ -86,7 +81,7 @@
             </AnchorPane>
             <AnchorPane fx:id="Menu" layoutX="541.0" layoutY="30.0" prefHeight="106.0" prefWidth="126.0" style="-fx-background-color: white;">
                <children>
-                  <JFXButton fx:id="btnLogout" alignment="CENTER" layoutX="12.0" layoutY="14.0" prefHeight="35.0" prefWidth="102.0" style="-fx-background-color: #ECECEC;" text="Log out">
+                  <JFXButton fx:id="btnLogout" alignment="CENTER" layoutX="12.0" layoutY="14.0"  prefHeight="35.0" prefWidth="102.0" style="-fx-background-color: #ECECEC;" text="Log out">
                      <graphic>
                         <ImageView fitHeight="38.0" fitWidth="18.0" pickOnBounds="true" preserveRatio="true">
                            <image>
@@ -113,59 +108,38 @@
                         <Font size="20.0" />
                      </font>
                   </Text>
-                  <JFXButton layoutX="43.0" layoutY="100.0" prefHeight="32.0" prefWidth="82.0" style="-fx-background-color: red;" text="Yes" textFill="WHITE">
+                  <JFXButton layoutX="43.0" layoutY="100.0"  prefHeight="32.0" prefWidth="82.0" style="-fx-background-color: red;" text="Yes" textFill="WHITE">
                      <font>
                         <Font size="15.0" />
                      </font>
                   </JFXButton>
-                  <JFXButton fx:id="closePopup" layoutX="157.0" layoutY="100.0" prefHeight="32.0" prefWidth="82.0" style="-fx-background-color: #32CD32;" text="No" textFill="WHITE">
-                     <font>
-                        <Font size="15.0" />
-                     </font>
-                  </JFXButton>
-               </children>
-            </AnchorPane>
-            <TableView fx:id="tableRent" layoutX="129.0" layoutY="153.0" prefHeight="239.0" prefWidth="519.0">
-              <columns>
-                <TableColumn fx:id="rentName" prefWidth="75.0" text="tên" />
-                <TableColumn fx:id="rentBrand" prefWidth="75.0" text="hãng" />
-                  <TableColumn fx:id="rentPrice" prefWidth="75.0" text="giá" />
-                  <TableColumn fx:id="rentKM" prefWidth="75.0" text="km" />
-                  <TableColumn fx:id="rentDay" prefWidth="75.0" text="ngày thuê" />
-                  <TableColumn fx:id="unrent" prefWidth="75.0" text="ngày trả" />
-                  <TableColumn fx:id="condition" prefWidth="75.0" text="trạng thái" />
-              </columns>
-            </TableView>
-            <AnchorPane fx:id="popupAdd" layoutX="120.0" layoutY="43.0" prefHeight="476.0" prefWidth="554.0" style="-fx-background-color: #fff;">
-               <children>
-                  <TextField fx:id="name" layoutX="82.0" layoutY="89.0" prefHeight="31.0" prefWidth="187.0" />
-                  <TextField fx:id="brand" layoutX="353.0" layoutY="89.0" prefHeight="31.0" prefWidth="187.0" />
-                  <TextField fx:id="km" layoutX="90.0" layoutY="144.0" prefHeight="31.0" prefWidth="76.0" />
-                  <TextField fx:id="rented" layoutX="90.0" layoutY="204.0" prefHeight="31.0" prefWidth="187.0" />
-                  <Label layoutX="9.0" layoutY="94.0" text="tên xe" />
-                  <Label layoutX="279.0" layoutY="94.0" text="hãng xe" />
-                  <Label layoutX="5.0" layoutY="149.0" text="km đã chạy" />
-                  <Label layoutX="9.0" layoutY="209.0" text="ngày thuê" />
-                  <CheckBox fx:id="condi" layoutX="22.0" layoutY="274.0" mnemonicParsing="false" onAction="#checkCondition" text="đã trả xe" />
-                  <TextField fx:id="unrented" layoutX="279.0" layoutY="269.0" />
-                  <Label layoutX="190.0" layoutY="274.0" text="ngày trả" />
-                  <JFXButton fx:id="popupSubmit" layoutX="228.0" layoutY="334.0" onAction="#submitHandle" prefHeight="31.0" prefWidth="126.0" style="-fx-background-color: green;" text="submit" textFill="#ebe8e8" />
-                  <JFXButton fx:id="popupQuitBtn" layoutX="511.0" layoutY="6.0" onAction="#handleQuitClick" style="-fx-background-color: red;" text="X" textFill="#e8e3e3" />
-                  <Label layoutX="281.0" layoutY="149.0" text="giá" />
-                  <TextField fx:id="price" layoutX="353.0" layoutY="144.0" />
-               </children>
-            </AnchorPane>
-            <AnchorPane fx:id="popupAction" layoutX="129.0" layoutY="43.0" prefHeight="113.0" prefWidth="278.0">
-               <children>
-                  <TextField fx:id="textSearch" layoutX="7.0" layoutY="58.0" onKeyReleased="#hanhdleSearch" prefHeight="31.0" prefWidth="187.0" />
-                  <JFXButton fx:id="btnSearch" layoutX="210.0" layoutY="58.0" prefHeight="31.0" prefWidth="76.0" style="-fx-background-color: pink;" text="search" />
-                  <JFXButton fx:id="btnAddRent" layoutX="12.0" layoutY="12.0" onAction="#handleAddClick" prefHeight="32.0" prefWidth="120.0" style="-fx-background-color: red;" text="thêm" textFill="WHITE">
+                  <JFXButton fx:id="closePopup" layoutX="157.0" layoutY="100.0"  prefHeight="32.0" prefWidth="82.0" style="-fx-background-color: #32CD32;" text="No" textFill="WHITE">
                      <font>
                         <Font size="15.0" />
                      </font>
                   </JFXButton>
                </children>
             </AnchorPane>
+            <JFXButton fx:id="newCar" layoutX="147.0" layoutY="63.0"  prefHeight="32.0" prefWidth="120.0" style="-fx-background-color: red;" text="Xe Mới" textFill="WHITE">
+               <font>
+                  <Font size="15.0" />
+               </font>
+            </JFXButton>
+            <JFXButton fx:id="oldCar" layoutX="295.0" layoutY="63.0"  prefHeight="32.0" prefWidth="120.0" style="-fx-background-color: #97cc76;" text="Xe Cũ" textFill="WHITE">
+               <font>
+                  <Font size="15.0" />
+               </font>
+            </JFXButton>
+            <TreeTableView fx:id="tableInfo" layoutX="147.0" layoutY="117.0" prefHeight="368.0" prefWidth="451.0">
+               <columns>
+                  <TreeTableColumn fx:id="CarName" prefWidth="75.0" text="Tên Xe" />
+                  <TreeTableColumn fx:id="CarBrand" prefWidth="75.0" text="Hãng Xe" />
+                  <TreeTableColumn fx:id="Price" prefWidth="75.0" text="Giá" />
+                  <TreeTableColumn fx:id="DayCar" prefWidth="75.0" text="Ngày Nhập" />
+                  <TreeTableColumn fx:id="guarantee" prefWidth="75.0" text="Bảo Hành" />
+                  <TreeTableColumn fx:id="Quantity" prefWidth="75.0" text="Số Lượng" />
+               </columns>
+            </TreeTableView>
          </children>
       </AnchorPane>
       <TreeTableView fx:id="tableInfoOldCar" layoutX="146.0" layoutY="118.0" prefHeight="378.0" prefWidth="519.0" style="visibility: false;">

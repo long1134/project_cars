@@ -6,6 +6,7 @@
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.control.TableColumn?>
 <?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
 <?import javafx.scene.image.Image?>
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
@@ -13,7 +14,7 @@
 
 <AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.customers">
    <children>
-      <AnchorPane prefHeight="506.0" prefWidth="125.0" style="-fx-background-color: #36394b;">
+      <AnchorPane prefHeight="648.0" prefWidth="125.0" style="-fx-background-color: #36394b;">
          <children>
             <ImageView fitHeight="49.0" fitWidth="35.0" layoutX="45.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true">
                <image>
@@ -82,7 +83,6 @@
       </AnchorPane>
       <JFXButton fx:id="vip" layoutX="148.0" layoutY="106.0" style="-fx-background-color: #97cc76;" text="VIP" textFill="#f2e9e9" />
       <JFXButton fx:id="potential" layoutX="293.0" layoutY="106.0" style="-fx-background-color: #97cc76;" text="tiềm năng" />
-      <JFXTextField layoutX="148.0" layoutY="59.0" prefHeight="31.0" prefWidth="189.0" style="-fx-background-color: white;" />
       <JFXButton layoutX="340.0" layoutY="59.0" style="-fx-background-color: red;" text="search" textFill="#e4e1e1" />
       <AnchorPane fx:id="Menu" layoutX="551.0" layoutY="40.0" prefHeight="106.0" prefWidth="126.0" style="-fx-background-color: white;">
          <children>
@@ -107,37 +107,46 @@
          </children>
       </AnchorPane>
       <JFXButton fx:id="addUserbtn" layoutX="424.0" layoutY="59.0" onAction="#addUserClick" style="-fx-background-color: #97cc76;" text="add user" />
-      <AnchorPane fx:id="popupAdd" layoutX="125.0" layoutY="108.0" prefHeight="396.0" prefWidth="430.0" style="-fx-background-color: white;" styleClass="adduserpopup" stylesheets="@customers.css">
+      <AnchorPane fx:id="popupAdd" layoutX="123.0" layoutY="247.0" prefHeight="387.0" prefWidth="547.0" style="-fx-background-color: white;" styleClass="adduserpopup" stylesheets="@customers.css">
          <children>
-            <JFXTextField fx:id="namefx" layoutX="134.0" layoutY="133.0" prefHeight="26.0" prefWidth="159.0" />
-            <JFXTextField fx:id="agefx" layoutX="134.0" layoutY="185.0" prefHeight="26.0" prefWidth="37.0" />
-            <JFXTextField fx:id="idfx" layoutX="126.0" layoutY="79.0" prefHeight="27.0" prefWidth="159.0" />
-            <Label layoutX="55.0" layoutY="74.0" text="id" />
-            <Label layoutX="49.0" layoutY="137.0" text="name" />
-            <Label layoutX="55.0" layoutY="189.0" text="age" />
-            <JFXButton fx:id="submit" layoutX="60.0" layoutY="334.0" onAction="#createUser" prefHeight="31.0" prefWidth="126.0" style="-fx-background-color: red;" text="submit" />
-            <Label layoutX="142.0" layoutY="14.0" prefHeight="59.0" prefWidth="137.0" text="add user" textAlignment="CENTER" textFill="#da4f4f">
+            <JFXButton fx:id="exit" layoutX="481.0" layoutY="5.0" minWidth="37.0" onAction="#exitClick" prefHeight="32.0" prefWidth="37.0" style="-fx-background-color: red;" text="X" textFill="#ebe4e4" />
+            <AnchorPane layoutX="73.0" layoutY="8.0" prefHeight="369.0" prefWidth="381.0">
+               <children>
+                  <JFXButton fx:id="submit" layoutX="128.0" layoutY="311.0" onAction="#createUser" prefHeight="31.0" prefWidth="126.0" style="-fx-background-color: green;" text="submit" />
+               </children>
+            </AnchorPane>
+            <JFXTextField fx:id="namefx" layoutX="184.0" layoutY="140.0" prefHeight="26.0" prefWidth="159.0" />
+            <JFXTextField fx:id="agefx" layoutX="184.0" layoutY="192.0" prefHeight="26.0" prefWidth="37.0" />
+            <JFXTextField fx:id="idfx" layoutX="176.0" layoutY="86.0" prefHeight="27.0" prefWidth="159.0" />
+            <Label layoutX="105.0" layoutY="81.0" text="id" />
+            <Label layoutX="99.0" layoutY="144.0" text="name" />
+            <Label layoutX="105.0" layoutY="196.0" text="age" />
+            <Label layoutX="192.0" layoutY="21.0" prefHeight="59.0" prefWidth="137.0" text="add user" textAlignment="CENTER" textFill="#da4f4f">
                <font>
                   <Font name="System Bold" size="32.0" />
                </font>
             </Label>
-            <JFXButton fx:id="exit" layoutX="268.0" layoutY="334.0" onAction="#exitClick" style="-fx-background-color: green;" text="exit" textFill="#ebe4e4" />
-            <JFXTextField fx:id="phonefx" layoutX="134.0" layoutY="242.0" prefHeight="26.0" prefWidth="137.0" />
-            <Label layoutX="50.0" layoutY="246.0" text="phone" />
-            <Label layoutX="214.0" layoutY="202.0" text="type" />
-            <JFXRadioButton fx:id="vipRadioCheck" layoutX="260.0" layoutY="176.0" text="vip" />
-            <JFXRadioButton fx:id="normalRadioCheck" layoutX="260.0" layoutY="202.0" text="normal" />
-            <JFXRadioButton fx:id="potentialRadioCheck" layoutX="260.0" layoutY="233.0" text="potential" />
+            <JFXTextField fx:id="phonefx" layoutX="184.0" layoutY="249.0" prefHeight="26.0" prefWidth="137.0" />
+            <Label layoutX="100.0" layoutY="253.0" text="phone" />
+            <Label layoutX="264.0" layoutY="209.0" text="type" />
+            <JFXRadioButton fx:id="vipRadioCheck" layoutX="310.0" layoutY="183.0" text="vip" />
+            <JFXRadioButton fx:id="normalRadioCheck" layoutX="310.0" layoutY="209.0" text="normal" />
+            <JFXRadioButton fx:id="potentialRadioCheck" layoutX="310.0" layoutY="240.0" text="potential" />
          </children>
       </AnchorPane>
-      <TableView fx:id="tableCus" layoutX="128.0" layoutY="173.0" prefHeight="266.0" prefWidth="399.0">
-        <columns>
-          <TableColumn fx:id="cusID" prefWidth="75.0" text="id" />
-          <TableColumn fx:id="cusName" prefWidth="75.0" text="name" />
-            <TableColumn fx:id="cusAge" prefWidth="75.0" text="age" />
-            <TableColumn fx:id="cusType" prefWidth="75.0" text="type" />
-            <TableColumn fx:id="cusPhone" prefWidth="75.0" text="phone" />
-        </columns>
-      </TableView>
+      <AnchorPane layoutX="202.0" layoutY="163.0" prefHeight="126.0" prefWidth="405.0">
+         <children>
+            <TableView fx:id="tableCus" editable="true" layoutX="6.0" layoutY="11.0" prefHeight="145.0" prefWidth="399.0">
+               <columns>
+                  <TableColumn fx:id="cusID" prefWidth="75.0" text="id" />
+                  <TableColumn fx:id="cusName" prefWidth="75.0" text="name" />
+                  <TableColumn fx:id="cusAge" prefWidth="75.0" text="age" />
+                  <TableColumn fx:id="cusType" prefWidth="75.0" text="type" />
+                  <TableColumn fx:id="cusPhone" prefWidth="75.0" text="phone" />
+               </columns>
+            </TableView>
+         </children>
+      </AnchorPane>
+      <TextField fx:id="textSearch" layoutX="144.0" layoutY="60.0" onKeyReleased="#hanhdleSearch" prefHeight="26.0" prefWidth="178.0" />
    </children>
 </AnchorPane>
