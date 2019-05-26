@@ -1,5 +1,4 @@
 package controller;
-
 import com.jfoenix.controls.JFXButton;
 import com.jfoenix.controls.JFXRadioButton;
 import javafx.beans.property.ReadOnlyStringWrapper;
@@ -21,8 +20,7 @@ import java.util.List;
 import java.util.ResourceBundle;
 
 import info.Customer;
-import info.CusVip;
-
+//import info.CusVip;
 public class customers implements Initializable {
     @FXML
     private AnchorPane Menu;
@@ -111,9 +109,9 @@ public class customers implements Initializable {
         String name= this.namefx.getText();
         String phone= this.phonefx.getText();
 
-         this.idfx.setText("");
+        this.idfx.setText("");
         this.agefx.setText("");
-         this.namefx.setText("");
+        this.namefx.setText("");
         this.phonefx.setText("");
         if(this.vipRadioCheck.isSelected())
         {
@@ -272,3 +270,5 @@ public class customers implements Initializable {
 
 
 }
+
+
