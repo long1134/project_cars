@@ -2,32 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="34fe2a34-0b8c-4e85-a204-2e58cd46f85d" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/AdminFXML/Car.fxml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/controller/listOrder.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/controllerAdmin/CarAdminControll.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/info/CarAdmin.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/info/OrderBuyingCar.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/info/OrderRentingCar.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/sample/listOrder.fxml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/services/OrderBuyingCarServices.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/services/OrderRentingCarServices.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/services/customerServices.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/controller/RentingCar.java" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/controller/customers.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/controller/customers.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/controller/home.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/controller/home.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/controller/login.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/controller/login.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/img/(51) set z-orderin javafx - YouTube.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/img/(51) set z-orderin javafx - YouTube.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/img/(51) set z-orderin javafx - YouTube_files/saved_resource(1).html" beforeDir="false" afterPath="$PROJECT_DIR$/src/img/(51) set z-orderin javafx - YouTube_files/saved_resource(1).html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/img/(51) set z-orderin javafx - YouTube_files/saved_resource.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/img/(51) set z-orderin javafx - YouTube_files/saved_resource.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/info/CusVip.java" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/info/Customer.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/module-info.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/module-info.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/sample/customers.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/sample/customers.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/sample/customers.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/sample/home.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/sample/home.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/sample/rentingCar.fxml" beforeDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -60,7 +37,7 @@
           <provider editor-type-id="JavaFX-Scene-Builder" />
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/controller/customers.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="72">
@@ -102,6 +79,15 @@
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="48">
               <caret line="2" column="32" selection-start-line="2" selection-start-column="32" selection-end-line="2" selection-end-column="32" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/info/CarAdmin.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="96">
+              <caret line="4" column="13" selection-start-line="4" selection-start-column="13" selection-end-line="4" selection-end-column="13" />
             </state>
           </provider>
         </entry>
@@ -253,7 +239,7 @@
       <updated>1557802490282</updated>
       <workItem from="1558713100196" duration="1415000" />
       <workItem from="1558785934179" duration="623000" />
-      <workItem from="1558946060590" duration="578000" />
+      <workItem from="1558946060590" duration="836000" />
     </task>
     <task id="LOCAL-00001" summary="create customer">
       <created>1558713619493</created>
@@ -276,11 +262,18 @@
       <option name="project" value="LOCAL" />
       <updated>1558786511047</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="create customer">
+      <created>1558946885206</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1558946885207</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="2616000" />
+    <option name="totallyTimeSpent" value="2874000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -294,7 +287,7 @@
   <component name="ToolWindowManager">
     <frame x="-7" y="-7" width="1550" height="838" extended-state="6" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.1671141" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.1671141" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Image Layers" order="2" />
       <window_info id="Designer" order="3" />
@@ -310,7 +303,7 @@
       <window_info anchor="bottom" id="TODO" order="6" weight="0.32941177" />
       <window_info anchor="bottom" id="Terminal" order="7" weight="0.32941177" />
       <window_info anchor="bottom" id="Event Log" order="8" sideWeight="0.50067115" side_tool="true" weight="0.32794118" />
-      <window_info active="true" anchor="bottom" id="Version Control" order="9" sideWeight="0.49932885" visible="true" weight="0.04411765" />
+      <window_info anchor="bottom" id="Version Control" order="9" sideWeight="0.49932885" visible="true" weight="0.35735294" />
       <window_info anchor="bottom" id="Messages" order="10" />
       <window_info anchor="bottom" id="Docker" order="11" show_stripe_button="false" />
       <window_info anchor="bottom" id="Database Changes" order="12" />
@@ -451,13 +444,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/info/CarOld.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="48">
-          <caret line="2" column="32" selection-start-line="2" selection-start-column="32" selection-end-line="2" selection-end-column="32" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/sample/Main.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="600">
@@ -476,6 +462,20 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="72">
           <caret line="3" selection-start-line="3" selection-end-line="3" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/info/CarOld.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="48">
+          <caret line="2" column="32" selection-start-line="2" selection-start-column="32" selection-end-line="2" selection-end-column="32" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/info/CarAdmin.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="96">
+          <caret line="4" column="13" selection-start-line="4" selection-start-column="13" selection-end-line="4" selection-end-column="13" />
         </state>
       </provider>
     </entry>
