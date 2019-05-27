@@ -1,33 +1,27 @@
 package controller;
 
 import com.jfoenix.controls.JFXButton;
-import com.jfoenix.controls.JFXTreeTableView;
+import com.jfoenix.controls.RecursiveTreeItem;
+import com.jfoenix.controls.datamodels.treetable.RecursiveTreeObject;
 import info.Car;
 import info.CarOld;
 import javafx.application.Platform;
-import javafx.beans.property.ReadOnlyDoubleWrapper;
-import javafx.beans.property.ReadOnlyIntegerWrapper;
 import javafx.beans.property.ReadOnlyStringWrapper;
+import javafx.collections.FXCollections;
+import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
-import javafx.geometry.Insets;
-import javafx.scene.Node;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
-import javafx.scene.control.TreeItem;
-import javafx.scene.control.TreeTableColumn;
-import javafx.scene.control.TreeTableView;
-import javafx.scene.control.cell.TreeItemPropertyValueFactory;
+import javafx.scene.control.*;
 import javafx.scene.effect.DropShadow;
 import javafx.scene.image.ImageView;
 import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.AnchorPane;
-import javafx.scene.layout.StackPane;
 import javafx.scene.paint.Color;
 import javafx.stage.Stage;
-import javafx.util.Callback;
 
 import java.io.IOException;
 import java.net.URL;
@@ -50,7 +44,7 @@ public class home implements Initializable {
     private JFXButton btnInFo;
 
     @FXML
-    private JFXButton RentBtn;
+    private JFXButton ListOrder;
 
     @FXML
     private JFXButton newCar;
@@ -62,49 +56,50 @@ public class home implements Initializable {
     private AnchorPane popupLogout;
 
     @FXML
-    private TreeTableView<Car> tableInfo = new TreeTableView<Car>();
+    private TableView<Car> tableInfo = new TableView<Car>();
 
     @FXML
-    TreeTableColumn<Car,String> CarName = new TreeTableColumn<>("Name");
+    TableColumn<Car,String> CarName = new TableColumn<>("Name");
 
     @FXML
-    TreeTableColumn<Car,String> CarBrand = new TreeTableColumn<>("CarBrand");
+    TableColumn<Car,String> CarBrand = new TableColumn<>("CarBrand");
 
     @FXML
-    TreeTableColumn<Car,String> Price = new TreeTableColumn<>("Price");
+    TableColumn<Car,String> Price = new TableColumn<>("Price");
 
     @FXML
-    TreeTableColumn<Car,String> DayCar = new TreeTableColumn<>("DayCar");
+    TableColumn<Car,String> DayCar = new TableColumn<>("DayCar");
 
     @FXML
-    TreeTableColumn<Car,String> guarantee = new TreeTableColumn<>("guarantee");
+    TableColumn<Car,String> guarantee = new TableColumn<>("guarantee");
 
     @FXML
-    TreeTableColumn<Car,String> Quantity = new TreeTableColumn<>("Quantity");
+    TableColumn<Car,String> Quantity = new TableColumn<>("Quantity");
+
 
     @FXML
-    private TreeTableView<CarOld> tableInfoOldCar;
+    private TableView<CarOld> tableInfoOldCar;
 
     @FXML
-    private TreeTableColumn<CarOld, String> CarNameOld;
+    private TableColumn<CarOld, String> CarNameOld;
 
     @FXML
-    private TreeTableColumn<CarOld, String> CarBrandOld;
+    private TableColumn<CarOld, String> CarBrandOld;
 
     @FXML
-    private TreeTableColumn<CarOld, Double> PriceOld;
+    private TableColumn<CarOld, Double> PriceOld;
 
     @FXML
-    private TreeTableColumn<CarOld, String> DayCarOld;
+    private TableColumn<CarOld, String> DayCarOld;
 
     @FXML
-    private TreeTableColumn<CarOld, String> guaranteeOld;
+    private TableColumn<CarOld, String> guaranteeOld;
 
     @FXML
-    private TreeTableColumn<CarOld, Integer> QuantityOld;
+    private TableColumn<CarOld, Integer> QuantityOld;
 
     @FXML
-    private TreeTableColumn<CarOld, Double> KMOld;
+    private TableColumn<CarOld, Double> KMOld;
 
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
@@ -118,34 +113,37 @@ public class home implements Initializable {
         popupLogout.setEffect(drop_shadow);
         newCar.setEffect(drop_shadow);
         oldCar.setEffect(drop_shadow);
+        tableInfoOldCar.setVisible(false);
         initTable();
     }
+
 
     public void initTable()
     {
 
         // Add info to column
-        CarName.setCellValueFactory((TreeTableColumn.CellDataFeatures<Car, String> param) -> new ReadOnlyStringWrapper(param.getValue().getValue().CarName));
+        CarName.setCellValueFactory((TableColumn.CellDataFeatures<Car, String> param) -> new ReadOnlyStringWrapper(param.getValue().CarName));
 
-        CarBrand.setCellValueFactory((TreeTableColumn.CellDataFeatures<Car, String> param) -> new ReadOnlyStringWrapper(param.getValue().getValue().CarBrand));
+        CarBrand.setCellValueFactory((TableColumn.CellDataFeatures<Car, String> param) -> new ReadOnlyStringWrapper(param.getValue().CarBrand));
         //Can't how to add double or Int to column so i have to transform to string
-        Price.setCellValueFactory((TreeTableColumn.CellDataFeatures<Car, String> param) -> new ReadOnlyStringWrapper(param.getValue().getValue().Price.toString()));
+        Price.setCellValueFactory((TableColumn.CellDataFeatures<Car, String> param) -> new ReadOnlyStringWrapper(param.getValue().Price.toString()));
 
-        DayCar.setCellValueFactory((TreeTableColumn.CellDataFeatures<Car, String> param) -> new ReadOnlyStringWrapper(param.getValue().getValue().DayCar));
+        DayCar.setCellValueFactory((TableColumn.CellDataFeatures<Car, String> param) -> new ReadOnlyStringWrapper(param.getValue().DayCar));
 
-        guarantee.setCellValueFactory((TreeTableColumn.CellDataFeatures<Car, String> param) -> new ReadOnlyStringWrapper(param.getValue().getValue().guarantee));
+        guarantee.setCellValueFactory((TableColumn.CellDataFeatures<Car, String> param) -> new ReadOnlyStringWrapper(param.getValue().guarantee));
 
-        Quantity.setCellValueFactory((TreeTableColumn.CellDataFeatures<Car, String> param) -> new ReadOnlyStringWrapper( param.getValue().getValue().Quantity.toString()));
+        Quantity.setCellValueFactory((TableColumn.CellDataFeatures<Car, String> param) -> new ReadOnlyStringWrapper( param.getValue().Quantity.toString()));
 
 
         // create data to table
         Car carBoss = new Car("BMW S10","BMW",1000.99,"21/10/1999","23/10/2018",19);
+        Car carBoss1 = new Car("BMW S10","BMW",1000.99,"21/10/1999","23/10/2018",19);
 
+        ObservableList<Car> data = FXCollections.observableArrayList(carBoss,carBoss1);
         //add data to table
-        TreeItem<Car> itemRoot = new TreeItem<Car>(carBoss);
 
         //show it into table
-        tableInfo.setRoot(itemRoot);
+        tableInfo.setItems(data);
 
     }
 
@@ -190,23 +188,14 @@ public class home implements Initializable {
         stage.setScene(new Scene(root,601,506));
         stage.show();
     }
-    @FXML
-    public void handleCustomer(ActionEvent event) throws IOException{
-        Parent root =FXMLLoader.load(getClass().getResource("/sample/customers.fxml"));
-        Stage stage=stageService.mainStage;
-        stage.setOnCloseRequest(e->Platform.exit());
-        stage.setScene(new Scene(root,671,506));
-        stage.show();
-    }
-    @FXML
-    public void handleRenting(ActionEvent event) throws IOException{
-        Parent root =FXMLLoader.load(getClass().getResource("/sample/rentingCar.fxml"));
-        Stage stage=stageService.mainStage;
-        stage.setOnCloseRequest(e->Platform.exit());
-        stage.setScene(new Scene(root,671,506));
-        stage.show();
-    }
 
+    public void handleCustomer() throws IOException{
+//      FXMLLoader fXMLLoader;
+        Parent root =FXMLLoader.load(getClass().getResource("/sample/customers.fxml"));     Stage stage=stageService.mainStage;
+        stage.setOnCloseRequest(e->Platform.exit());
+        stage.setScene(new Scene(root,671,506));
+        stage.show();
+    }
 
     //show list old car
     public void showOldCar()
@@ -224,16 +213,14 @@ public class home implements Initializable {
         oldCar.setStyle("-fx-background-color:  #97cc76");
         tableInfoOldCar.setVisible(false);
         tableInfo.setVisible(true);
-
     }
 
-
-//    public void handleCustomers() throws IOException{
-//        Parent root = FXMLLoader.load(getClass().getResource("/sample/customers.fxml"));
-//        Stage stage = stageService.mainStage;
-//        stage.setOnCloseRequest(a -> Platform.exit());
-//        stage.setScene(new Scene(root,671,506));
-//        stage.show();
-//    }
-
+    public void gotoListOrder() throws IOException
+    {
+        Parent root = FXMLLoader.load(getClass().getResource("/sample/listOrder.fxml"));
+        Stage stage = stageService.mainStage;
+        stage.setOnCloseRequest(a->Platform.exit());
+        stage.setScene(new Scene(root));
+        stage.show();
+    }
 }

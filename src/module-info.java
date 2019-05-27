@@ -10,4 +10,5 @@ module Javafx{
     requires com.jfoenix;
     opens sample;
     opens controller;
+    opens controllerAdmin;
 }

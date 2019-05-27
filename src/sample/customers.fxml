@@ -1,17 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <?import com.jfoenix.controls.JFXButton?>
-<?import com.jfoenix.controls.JFXRadioButton?>
-<?import com.jfoenix.controls.JFXTextField?>
-<?import javafx.scene.control.Label?>
-<?import javafx.scene.control.TableColumn?>
-<?import javafx.scene.control.TableView?>
 <?import javafx.scene.image.Image?>
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.customers">
+
+<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/10.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.customers">
    <children>
       <AnchorPane prefHeight="506.0" prefWidth="125.0" style="-fx-background-color: #36394b;">
          <children>
@@ -32,7 +28,7 @@
                   <Font size="15.0" />
                </font>
             </JFXButton>
-            <JFXButton alignment="TOP_LEFT" layoutX="-1.0" layoutY="152.0" prefHeight="35.0" prefWidth="126.0" style="-fx-background-color: #485563;" text="List Car" textFill="WHITE">
+            <JFXButton alignment="TOP_LEFT" layoutX="-1.0" layoutY="152.0" prefHeight="35.0" prefWidth="126.0" style="-fx-background-color: #de6262;" text="List Car" textFill="WHITE">
                <graphic>
                   <ImageView fitHeight="30.0" fitWidth="26.0" pickOnBounds="true" preserveRatio="true">
                      <image>
@@ -44,7 +40,7 @@
                   <Font size="15.0" />
                </font>
             </JFXButton>
-            <JFXButton fx:id="gotoCustomers" alignment="TOP_LEFT" layoutX="-3.0" layoutY="217.0" prefHeight="35.0" prefWidth="126.0" style="-fx-background-color: #de6262;" text="Customers" textFill="WHITE">
+            <JFXButton fx:id="gotoCustomers" alignment="TOP_LEFT" layoutX="-3.0" layoutY="217.0" onAction="#handleCustomer" prefHeight="35.0" prefWidth="126.0" style="-fx-background-color: #485563;" text="Customers" textFill="WHITE">
                <graphic>
                   <ImageView fitHeight="26.0" fitWidth="35.0" pickOnBounds="true" preserveRatio="true">
                      <image>
@@ -70,74 +66,5 @@
             </JFXButton>
          </children>
       </AnchorPane>
-      <JFXButton fx:id="normal" layoutX="208.0" layoutY="106.0" style="-fx-background-color: #97cc76;" text="thường" />
-      <AnchorPane layoutX="125.0" prefHeight="43.0" prefWidth="554.0" style="-fx-background-color: #36394b;">
-         <children>
-            <ImageView fx:id="menuIcon" fitHeight="27.0" fitWidth="52.0" layoutX="497.0" layoutY="8.0" pickOnBounds="true" preserveRatio="true">
-               <image>
-                  <Image url="@../img/menu.png" />
-               </image>
-            </ImageView>
-         </children>
-      </AnchorPane>
-      <JFXButton fx:id="vip" layoutX="148.0" layoutY="106.0" style="-fx-background-color: #97cc76;" text="VIP" textFill="#f2e9e9" />
-      <JFXButton fx:id="potential" layoutX="293.0" layoutY="106.0" style="-fx-background-color: #97cc76;" text="tiềm năng" />
-      <JFXTextField layoutX="148.0" layoutY="59.0" prefHeight="31.0" prefWidth="189.0" style="-fx-background-color: white;" />
-      <JFXButton layoutX="340.0" layoutY="59.0" style="-fx-background-color: red;" text="search" textFill="#e4e1e1" />
-      <AnchorPane fx:id="Menu" layoutX="551.0" layoutY="40.0" prefHeight="106.0" prefWidth="126.0" style="-fx-background-color: white;">
-         <children>
-            <JFXButton fx:id="btnLogout" alignment="CENTER" layoutX="12.0" layoutY="14.0" prefHeight="35.0" prefWidth="102.0" style="-fx-background-color: #ECECEC;" text="Log out">
-               <graphic>
-                  <ImageView fitHeight="38.0" fitWidth="18.0" pickOnBounds="true" preserveRatio="true">
-                     <image>
-                        <Image url="@../img/018_128_arrow_exit_logout-512.png" />
-                     </image>
-                  </ImageView>
-               </graphic>
-            </JFXButton>
-            <JFXButton fx:id="btnInFo" alignment="CENTER" layoutX="12.0" layoutY="58.0" prefHeight="35.0" prefWidth="102.0" style="-fx-background-color: #ECECEC;" text="Info">
-               <graphic>
-                  <ImageView fitHeight="16.0" fitWidth="19.0" pickOnBounds="true" preserveRatio="true">
-                     <image>
-                        <Image url="@../img/information-512.png" />
-                     </image>
-                  </ImageView>
-               </graphic>
-            </JFXButton>
-         </children>
-      </AnchorPane>
-      <JFXButton fx:id="addUserbtn" layoutX="424.0" layoutY="59.0" onAction="#addUserClick" style="-fx-background-color: #97cc76;" text="add user" />
-      <AnchorPane fx:id="popupAdd" layoutX="125.0" layoutY="108.0" prefHeight="396.0" prefWidth="430.0" style="-fx-background-color: white;" styleClass="adduserpopup" stylesheets="@customers.css">
-         <children>
-            <JFXTextField fx:id="namefx" layoutX="134.0" layoutY="133.0" prefHeight="26.0" prefWidth="159.0" />
-            <JFXTextField fx:id="agefx" layoutX="134.0" layoutY="185.0" prefHeight="26.0" prefWidth="37.0" />
-            <JFXTextField fx:id="idfx" layoutX="126.0" layoutY="79.0" prefHeight="27.0" prefWidth="159.0" />
-            <Label layoutX="55.0" layoutY="74.0" text="id" />
-            <Label layoutX="49.0" layoutY="137.0" text="name" />
-            <Label layoutX="55.0" layoutY="189.0" text="age" />
-            <JFXButton fx:id="submit" layoutX="60.0" layoutY="334.0" onAction="#createUser" prefHeight="31.0" prefWidth="126.0" style="-fx-background-color: red;" text="submit" />
-            <Label layoutX="142.0" layoutY="14.0" prefHeight="59.0" prefWidth="137.0" text="add user" textAlignment="CENTER" textFill="#da4f4f">
-               <font>
-                  <Font name="System Bold" size="32.0" />
-               </font>
-            </Label>
-            <JFXButton fx:id="exit" layoutX="268.0" layoutY="334.0" onAction="#exitClick" style="-fx-background-color: green;" text="exit" textFill="#ebe4e4" />
-            <JFXTextField fx:id="phonefx" layoutX="134.0" layoutY="242.0" prefHeight="26.0" prefWidth="137.0" />
-            <Label layoutX="50.0" layoutY="246.0" text="phone" />
-            <Label layoutX="214.0" layoutY="202.0" text="type" />
-            <JFXRadioButton fx:id="vipRadioCheck" layoutX="260.0" layoutY="176.0" text="vip" />
-            <JFXRadioButton fx:id="normalRadioCheck" layoutX="260.0" layoutY="202.0" text="normal" />
-            <JFXRadioButton fx:id="potentialRadioCheck" layoutX="260.0" layoutY="233.0" text="potential" />
-         </children>
-      </AnchorPane>
-      <TableView fx:id="tableCus" layoutX="128.0" layoutY="173.0" prefHeight="266.0" prefWidth="399.0">
-        <columns>
-          <TableColumn fx:id="cusID" prefWidth="75.0" text="id" />
-          <TableColumn fx:id="cusName" prefWidth="75.0" text="name" />
-            <TableColumn fx:id="cusAge" prefWidth="75.0" text="age" />
-            <TableColumn fx:id="cusType" prefWidth="75.0" text="type" />
-            <TableColumn fx:id="cusPhone" prefWidth="75.0" text="phone" />
-        </columns>
-      </TableView>
    </children>
 </AnchorPane>
