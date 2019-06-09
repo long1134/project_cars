@@ -1,5 +1,4 @@
 package controller;
-
 import com.jfoenix.controls.JFXButton;
 import com.jfoenix.controls.JFXRadioButton;
 import javafx.beans.property.ReadOnlyStringWrapper;
@@ -10,6 +9,7 @@ import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.control.*;
 import javafx.scene.effect.DropShadow;
+import javafx.scene.input.KeyEvent;
 import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.AnchorPane;
 import javafx.scene.paint.Color;
@@ -20,7 +20,7 @@ import java.util.List;
 import java.util.ResourceBundle;
 
 import info.Customer;
-
+//import info.CusVip;
 public class customers implements Initializable {
     @FXML
     private AnchorPane Menu;
@@ -39,7 +39,8 @@ public class customers implements Initializable {
     @FXML
     private JFXButton addUserbtn;
 
-
+    @FXML
+    private TextField textSearch;
 
     @FXML
     private JFXButton exit;
@@ -90,11 +91,11 @@ public class customers implements Initializable {
     TableColumn<Customer,String> cusPhone = new TableColumn<>("cusPhone");
 
     final ObservableList<Customer> data = FXCollections.observableArrayList(
-            new Customer("152","hoang anh","59","khach vip","244444145"),
-            new Customer("152","hoang anh","59","khach vip","244444145"),
-            new Customer("152","hoang anh","59","khach vip","244444145"),
-            new Customer("152","hoang anh","59","khach vip","244444145"),
-            new Customer("152","hoang anh","59","khach vip","244444145")
+            new Customer("152","hoang ","59","khach vip","244444145"),
+            new Customer("152"," anh","59","khach vip","244444145"),
+            new Customer("152","hoang tu","59","khach vip","244444145"),
+            new Customer("152","tu anh","59","khach vip","244444145"),
+            new Customer("152","hoang duc","59","khach vip","244444145")
     );
 
     ArrayList<Customer> listCus = new ArrayList<>();
@@ -108,9 +109,9 @@ public class customers implements Initializable {
         String name= this.namefx.getText();
         String phone= this.phonefx.getText();
 
-         this.idfx.setText("");
+        this.idfx.setText("");
         this.agefx.setText("");
-         this.namefx.setText("");
+        this.namefx.setText("");
         this.phonefx.setText("");
         if(this.vipRadioCheck.isSelected())
         {
@@ -152,8 +153,41 @@ public class customers implements Initializable {
 //        }
 //
 //    }
+//    ObservableList<Customer> sortKey(String key){
+//
+//    }
+//
 
 
+    @FXML
+    int hanhdleSearch(KeyEvent e)
+    {
+        ObservableList<Customer> tempcus = FXCollections.observableArrayList();
+        String key=textSearch.getText();
+        System.out.println(key);
+        tempcus=findKey(key);
+        if(!tempcus.isEmpty())
+        {
+
+            this.tableCus.setItems(tempcus);
+            return 1;
+        }
+        this.tableCus.setItems(data);
+        return -1;
+    }
+    ObservableList<Customer> findKey(String key)
+    {    final   ObservableList<Customer> a= FXCollections.observableArrayList();
+        for(int i =0 ;i<data.size();i++){
+            Customer temp=data.get(i);
+
+            if(temp.name.toString().contains(key)){
+                System.out.println(key);
+                a.add(temp);
+            }
+        }
+        System.out.println(a);
+        return a;
+    }
 
 
 
@@ -236,3 +270,5 @@ public class customers implements Initializable {
 
 
 }
+
+
