@@ -13,11 +13,6 @@ public class OrderBuyingCar {
     public String nameCar;
     public String statusCar;
 
-    public OrderBuyingCar()
-    {
-
-    }
-
     public OrderBuyingCar(String id, String name, String phone, String address,String email, String price, String comeDay, String carId, String nameCar, String statusCar, String idOrder)
     {
         this.idOrder = idOrder;

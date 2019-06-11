@@ -366,7 +366,7 @@ public class CarAdminControll implements Initializable {
 
         if(!isNewCar)
         {
-            String KM = txtNameCar.getText();
+            String KM = txtKMCar.getText();
             CarOld car = new CarOld(name,brand,price,Day,gruant,quanlity,KM);
             arrCarOld.arrOldCar.add(car);
             arrCarOld.addOldCar(car);
@@ -385,6 +385,7 @@ public class CarAdminControll implements Initializable {
             CarAdmin car = new CarAdmin(name,brand,price,Day,gruant,quanlity);
             arrCarNew.arrNewCar.add(car);
             arrCarNew.addNewCar(car);
+
             InitTableNewCar(FXCollections.observableArrayList(arrCarNew.arrNewCar));
             txtNameCar.setText("");
             txtBrandCar.setText("");
@@ -438,7 +439,9 @@ public class CarAdminControll implements Initializable {
                 String KM = txtKMCar.getText();
                 int j = arrCarOld.arrOldCar.indexOf(carOld);
                 carOld = new CarOld(name,brand,price,Day,gruant,quanlity,KM);
+                carOld.id = k;
                 arrCarOld.arrOldCar.set(j,carOld);
+                arrCarOld.updateOldCar(carOld);
                 InitTableOldCar(FXCollections.observableArrayList(arrCarOld.arrOldCar));
             }
             else

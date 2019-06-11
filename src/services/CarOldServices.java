@@ -21,7 +21,11 @@ public class CarOldServices implements Initializable {
     }
 
     public void addOldCar(CarOld car) throws SQLException {
-        jdbcConnect.addNewCarOld(car, arrOldCar.size());
+        jdbcConnect.addNewCarOld(car);
+    }
+
+    public void updateOldCar(CarOld car) throws SQLException {
+        jdbcConnect.updateOldCar(car);
     }
 
     @Override

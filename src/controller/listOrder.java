@@ -31,6 +31,7 @@ import services.OrderRentingCarServices;
 import java.awt.event.MouseEvent;
 import java.io.IOException;
 import java.net.URL;
+import java.sql.SQLException;
 import java.time.LocalDate;
 import java.util.ArrayList;
 import java.util.ResourceBundle;
@@ -39,7 +40,6 @@ public class listOrder implements Initializable {
     private boolean isOpen = false;
     private boolean isBuyingCar = false;
     private boolean isNewCar = true;
-    private ArrayList<OrderBuyingCar> buyingCarArrayList = new OrderBuyingCarServices().getArrDefault();
     private OrderBuyingCarServices OrderBuyingSV = new OrderBuyingCarServices();
 
     private OrderRentingCarServices OrderRentingSV = new OrderRentingCarServices();
@@ -249,6 +249,7 @@ public class listOrder implements Initializable {
         btnChoseNew.setVisible(true);
         btnChoseOld.setVisible(true);
         txtDay.setVisible(true);
+        isBuyingCar = true;
     }
 
     @FXML
@@ -261,6 +262,7 @@ public class listOrder implements Initializable {
         btnChoseNew.setVisible(false);
         btnChoseOld.setVisible(false);
         txtDay.setVisible(false);
+        isBuyingCar = false;
     }
 
     @FXML
@@ -323,8 +325,20 @@ public class listOrder implements Initializable {
         btnChoseOld.setVisible(false);
         txtDay.setVisible(false);
         tableOrderRenting.setVisible(false);
-        DrawTable(FXCollections.observableArrayList(OrderBuyingSV.getArrDefault())) ;
-        DrawTableRentingCar(FXCollections.observableArrayList(OrderRentingSV.getArrDefault()));
+        try {
+            DrawTable(FXCollections.observableArrayList(OrderBuyingSV.getArrDefault())) ;
+        } catch (SQLException e) {
+            e.printStackTrace();
+        } catch (ClassNotFoundException e) {
+            e.printStackTrace();
+        }
+        try {
+            DrawTableRentingCar(FXCollections.observableArrayList(OrderRentingSV.getArrDefault()));
+        } catch (SQLException e) {
+            e.printStackTrace();
+        } catch (ClassNotFoundException e) {
+            e.printStackTrace();
+        }
     }
 
     public void handleCustomer() {

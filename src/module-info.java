@@ -12,4 +12,5 @@ module Javafx{
     opens sample;
     opens controller;
     opens controllerAdmin;
+    opens JDBC;
 }

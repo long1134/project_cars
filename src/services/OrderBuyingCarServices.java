@@ -1,14 +1,17 @@
 package services;
 
+import JDBC.JDBCConnect;
 import info.OrderBuyingCar;
 import javafx.fxml.Initializable;
 
 import java.net.URL;
+import java.sql.SQLException;
 import java.util.ArrayList;
 import java.util.ResourceBundle;
 
 public class OrderBuyingCarServices implements Initializable {
     public ArrayList<OrderBuyingCar> arrOrderBuyingCar = new ArrayList<>();
+    public JDBCConnect jdbcConnect = new JDBCConnect();
 
 
     @Override
@@ -16,9 +19,20 @@ public class OrderBuyingCarServices implements Initializable {
 
     }
 
-    public ArrayList<OrderBuyingCar> getArrDefault(){
-        arrOrderBuyingCar.add( new OrderBuyingCar("123","Long","0933341473","23/1/1","dauan6969@gmail.com","1000","23-10-1999","123","mercedes 320","New","111"));
-        arrOrderBuyingCar.add(new OrderBuyingCar("124","Ha","0933341473","23/1/1","dauan6969@gmail.com","1000","23-10-1999","123","mercedes 320","New","111"));
+    public void addOrderBuying(String status, String idCar, String idCus, String Price, String day) throws SQLException {
+        jdbcConnect.addOrderBuying(status,idCar,idCus,Price,day);
+    }
+
+    public void updateOrderBuying(String status, String idCar, String idCus, String Price, String day, String id) throws SQLException {
+        jdbcConnect.updateOrderBuying(status,idCar,idCus,Price,day,id);
+    }
+
+    public void deleteOrderBuying(String id) throws SQLException {
+        jdbcConnect.deleteOrderBuying(id);
+    }
+
+    public ArrayList<OrderBuyingCar> getArrDefault() throws SQLException, ClassNotFoundException {
+        arrOrderBuyingCar = jdbcConnect.getDefaultOrderBuying();
         return arrOrderBuyingCar;
     }
 }
