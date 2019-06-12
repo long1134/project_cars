@@ -7,6 +7,7 @@ module Javafx{
     requires javafx.swing;
     requires javafx.swt;
     requires javafx.web;
+    requires java.sql;
     requires com.jfoenix;
     opens sample;
     opens controller;

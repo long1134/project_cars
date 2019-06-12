@@ -32,7 +32,7 @@
                   <Font size="15.0" />
                </font>
             </JFXButton>
-            <JFXButton alignment="TOP_LEFT" layoutX="-1.0" layoutY="152.0" prefHeight="35.0" prefWidth="126.0" style="-fx-background-color: #485563;" text="List Car" textFill="WHITE">
+            <JFXButton fx:id="gotoListCar" alignment="TOP_LEFT" layoutX="-1.0" layoutY="152.0" onAction="#handleListCar" prefHeight="35.0" prefWidth="126.0" style="-fx-background-color: #485563;" text="List Car" textFill="WHITE">
                <graphic>
                   <ImageView fitHeight="30.0" fitWidth="26.0" pickOnBounds="true" preserveRatio="true">
                      <image>
@@ -68,7 +68,7 @@
                   <Font size="15.0" />
                </font>
             </JFXButton>
-            <JFXButton fx:id="Employee" alignment="TOP_LEFT" layoutY="335.0" onAction="#GoToEmployee" prefHeight="36.0" prefWidth="126.0" style="-fx-background-color: #485563;" text="Employee" textFill="WHITE">
+            <JFXButton fx:id="gotoEmployee" alignment="TOP_LEFT" layoutY="335.0" onAction="#handleEmployee" prefHeight="36.0" prefWidth="126.0" style="-fx-background-color: #485563;" text="Employee" textFill="WHITE">
                <font>
                   <Font size="15.0" />
                </font>

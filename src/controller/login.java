@@ -58,7 +58,7 @@ public class login implements Initializable {
     }
 
     public void login() throws IOException{
-        Parent root = FXMLLoader.load(getClass().getResource("/AdminFXML/Car.fxml"));
+        Parent root = FXMLLoader.load(getClass().getResource("/AdminFXML/customer.fxml"));
         Stage stage = stageService.mainStage;
         stage.setOnCloseRequest(a -> Platform.exit());
         stage.setScene(new Scene(root));

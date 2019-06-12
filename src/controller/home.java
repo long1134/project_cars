@@ -136,10 +136,9 @@ public class home implements Initializable {
 
 
         // create data to table
-        Car carBoss = new Car("BMW S10","BMW",1000.99,"21/10/1999","23/10/2018",19);
-        Car carBoss1 = new Car("BMW S10","BMW",1000.99,"21/10/1999","23/10/2018",19);
+        Car carBoss = new Car("BMW S10","BMW","1000.99","21/10/1999","23/10/2018","19");
 
-        ObservableList<Car> data = FXCollections.observableArrayList(carBoss,carBoss1);
+        ObservableList<Car> data = FXCollections.observableArrayList(carBoss);
         //add data to table
 
         //show it into table
