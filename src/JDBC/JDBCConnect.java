@@ -14,6 +14,9 @@ public class JDBCConnect {
     public ArrayList<CarOld> arrOldCar = new ArrayList<>();
     public ArrayList<OrderBuyingCar> arrOrderBuying = new ArrayList<>();
     public ArrayList<OrderRentingCar> arrOrderRenting = new ArrayList<>();
+    public ArrayList<userLogin> arrUserLogin = new ArrayList<>();
+    public ArrayList<Customer> arrCustomer = new ArrayList<>();
+    public ArrayList<employee> arrEmployee = new ArrayList<>();
 
     public ArrayList<CarAdmin> getDefaultCarNew() throws SQLException, ClassNotFoundException {
         System.out.println("hello");
@@ -294,6 +297,165 @@ public class JDBCConnect {
         ps.execute();
     }
 
+    //user login
+    public ArrayList<userLogin> getDefaultUserLogin() throws SQLException, ClassNotFoundException {
+        arrOrderRenting = new ArrayList<>();
+        Class.forName(driver);
+        Connection con = DriverManager.getConnection(url,"proj","123");
+        Statement stat = con.createStatement();
+        String sql = "select USERID, PASS, CHUCVU from NHANVIEN";
+        ResultSet rs = stat.executeQuery(sql);
+        while (rs.next())
+        {
+            String userName = rs.getString("USERID");
+            String password = rs.getString("PASS");
+            String type = rs.getString("CHUCVU");
+
+            userLogin user = new userLogin(userName,password,type);
+            arrUserLogin.add(user);
+        }
+        return arrUserLogin;
+    }
+
+    //customer
+    public ArrayList<Customer> getDefaultCustomer() throws SQLException, ClassNotFoundException {
+        arrCustomer = new ArrayList<>();
+        Class.forName(driver);
+        Connection con = DriverManager.getConnection(url,"proj","123");
+        Statement stat = con.createStatement();
+        String sql = "select ID,HOTEN,SDT,EMAIL,LOAIKH,DCHI,GHICHU FROM KHACHHANG";
+        ResultSet rs = stat.executeQuery(sql);
+        while (rs.next())
+        {
+            String idCus = rs.getString("ID");
+            String name = rs.getString("HOTEN");
+            String phone = rs.getString("SDT");
+            String email = rs.getString("EMAIL");
+            String typeCus = rs.getString("LOAIKH");
+            String address = rs.getString("DCHI");
+            String age = rs.getString("GHICHU");
+
+            Customer customer = new Customer(idCus,name,age,typeCus,phone,email,address);
+            arrCustomer.add(customer);
+
+        }
+        System.out.println("long"+arrNewCar);
+        return arrCustomer;
+    }
+
+    public void addNewCus(Customer customer) throws SQLException {
+
+        Connection con = DriverManager.getConnection(url,"proj","123");
+        Statement stat = con.createStatement();
+        String sql1 = "insert into KHACHHANG values(KHACHHANG_ID_SEQ.nextVal,'"+customer.name+"','"+customer.phone+"','"+customer.email+"','"+customer.address+"',NULL,'"+customer.type+"',NULL,'2','"+customer.age+"')";
+        System.out.println(sql1);
+        PreparedStatement pes = con.prepareStatement(sql1);
+        pes.execute();
+    }
+
+    public void updateCustomer(Customer customer) throws SQLException {
+        Connection con = DriverManager.getConnection(url,"proj","123");
+        String sql = "UPDATE KHACHHANG SET HOTEN = '"+customer.name+"',SDT='"+customer.phone+"',EMAIL='"+customer.email+"',LOAIKH='"+customer.type+"',DCHI='"+customer.address+"', GHICHU='"+customer.age+"' WHERE ID = '"+customer.id+"'";
+        System.out.println(sql);
+        PreparedStatement ps = con.prepareStatement(sql);
+        ps.execute();
+    }
+
+    public void deleteCustomer(String id) throws SQLException {
+        Connection con = DriverManager.getConnection(url,"proj","123");
+        String sql = "select ID FROM THUEXE where ID_KH = '"+id+"'";
+        Statement stat = con.createStatement();
+        ResultSet rs = stat.executeQuery(sql);
+        ArrayList<String> arrayList = new ArrayList<>();
+        while (rs.next())
+        {
+            String a = rs.getString("ID");
+            arrayList.add(a);
+        }
+        if(arrayList.size() != 0)
+        {
+            for (String a : arrayList)
+            {
+                String sql1 = "delete from CTTX  where ID_TX='"+a+"'";
+                PreparedStatement pes = con.prepareStatement(sql1);
+                pes.execute();
+                String sql2 = "delete from THUEXE  WHERE ID_KH= '"+id+"'";
+                pes = con.prepareStatement(sql2);
+                pes.execute();
+            }
+        }
+        sql = "select ID FROM HOADON where ID_KH = '"+id+"'";
+        rs = stat.executeQuery(sql);
+        arrayList = new ArrayList<>();
+        while (rs.next())
+        {
+            String a = rs.getString("ID");
+            arrayList.add(a);
+        }
+        if(arrayList.size() != 0)
+        {
+            for (String a : arrayList)
+            {
+                String sql1 = "delete from CTHD  where ID_TX='"+a+"'";
+                PreparedStatement pes = con.prepareStatement(sql1);
+                pes.execute();
+                String sql2 = "delete from HOADON  WHERE ID_KH= '"+id+"'";
+                pes = con.prepareStatement(sql2);
+                pes.execute();
+            }
+        }
+
+        sql = "delete from KHACHHANG  where ID='"+id+"'";
+        PreparedStatement pes = con.prepareStatement(sql);
+        pes.execute();
+    }
+
+    //employee
+    public ArrayList<employee> getDefaultEmployee() throws SQLException, ClassNotFoundException {
+        arrEmployee = new ArrayList<>();
+        Class.forName(driver);
+        Connection con = DriverManager.getConnection(url,"proj","123");
+        Statement stat = con.createStatement();
+        String sql = "select * from NHANVIEN ";
+        ResultSet rs = stat.executeQuery(sql);
+        while (rs.next())
+        {
+            String id = rs.getString("ID");
+            String ho = rs.getString("HO");
+            String name = rs.getString("TEN");
+            String userId = rs.getString("USERID");
+            String pass = rs.getString("PASS");
+            String managerID = rs.getString("MAQL");
+            String position = rs.getString("CHUCVU");
+            String room = rs.getString("MA_PHONG");
+            String salary = rs.getString("LUONG");
+            String bonous = rs.getString("TIENHOAHONG");
+            String day = rs.getString("NGVAOLAM").substring(0,11);
+            employee emp = new employee(id,ho,name,userId,pass,day,managerID,position,room,salary,bonous);
+            arrEmployee.add(emp);
+        }
+        System.out.println("long"+arrNewCar);
+        return arrEmployee;
+    }
+
+    public void addNEmployee(employee cus) throws SQLException {
+        Connection con = DriverManager.getConnection(url,"proj","123");
+        System.out.println("Long");
+        Statement stat = con.createStatement();
+        String sql = "insert into NHANVIEN values (NHANVIEN_ID_SEQ.nextVal,'"+cus.HO+"','"+cus.Ten+"','"+cus.userID+"','"+cus.Pass+"',to_date('"+cus.NgayVaoLam+"','yyyy-mm-dd'),'"+cus.MaQL+"','"+cus.ChucVu+"','"+cus.MaPhong+"','"+cus.Luong+"','"+cus.TienHoaHong+"')";
+        System.out.println(sql);
+        PreparedStatement ps = con.prepareStatement(sql);
+        ps.execute();
+    }
+
+    public void updateEmployee(employee emp) throws SQLException {
+        Connection con = DriverManager.getConnection(url,"proj","123");
+        String sql = "UPDATE NHANVIEN set HO = '"+emp.HO+"' , TEN = '"+emp.Ten+"',NGVAOLAM = to_date('"+emp.NgayVaoLam+"','yyyy-mm-dd'), USERID = '"+emp.userID+"', PASS = '"+emp.Pass+"', CHUCVU='"+emp.ChucVu+"', MA_PHONG='"+emp.MaPhong+"', LUONG='"+emp.Luong+"', TIENHOAHONG='"+emp.TienHoaHong+"' WHERE ID='"+emp.ID+"'";
+        PreparedStatement ps = con.prepareStatement(sql);
+        ps.execute();
+
+    }
+
     public static void main(String[] args) throws ClassNotFoundException, SQLException {
         ArrayList<CarAdmin> arrNewCar = new ArrayList<>();
         String url = "jdbc:oracle:thin:@localhost:1521:orcl";
@@ -306,7 +468,6 @@ public class JDBCConnect {
         String Price = "2000";
         String idCar = "1";
         String status = "Old";
-        String idEm = "1";
         String id = "8";
         String sql = "UPDATE HOADON set ID_KH = '"+idCus+"' , NGNHAP = to_date('"+day+"','yyyy-mm-dd'),TONGGIA = '"+Price+"' WHERE ID= '"+id+"'";
         System.out.println(sql);

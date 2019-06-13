@@ -11,7 +11,7 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.customers">
+<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/10.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.customers">
    <children>
       <AnchorPane prefHeight="506.0" prefWidth="125.0" style="-fx-background-color: #36394b;">
          <children>
@@ -20,7 +20,7 @@
                   <Image url="@../img/585e4bf3cb11b227491c339a.png" />
                </image>
             </ImageView>
-            <JFXButton alignment="TOP_LEFT" layoutX="-1.0" layoutY="92.0" prefHeight="35.0" prefWidth="126.0" style="-fx-background-color: #485563;" text="Dashboard" textFill="WHITE">
+            <JFXButton fx:id="btnRentingCar" alignment="TOP_LEFT" layoutX="-1.0" layoutY="92.0" onAction="#handleGotoRentingCar" prefHeight="35.0" prefWidth="126.0" style="-fx-background-color: #485563;" text="Renting Car" textFill="WHITE">
                <graphic>
                   <ImageView fitHeight="26.0" fitWidth="35.0" pickOnBounds="true" preserveRatio="true">
                      <image>
@@ -32,7 +32,7 @@
                   <Font size="15.0" />
                </font>
             </JFXButton>
-            <JFXButton alignment="TOP_LEFT" layoutX="-1.0" layoutY="152.0" prefHeight="35.0" prefWidth="126.0" style="-fx-background-color: #485563;" text="List Car" textFill="WHITE">
+            <JFXButton fx:id="btnListCar" alignment="TOP_LEFT" layoutX="-1.0" layoutY="152.0" onAction="#handleGotoListCar" prefHeight="35.0" prefWidth="126.0" style="-fx-background-color: #485563;" text="List Car" textFill="WHITE">
                <graphic>
                   <ImageView fitHeight="30.0" fitWidth="26.0" pickOnBounds="true" preserveRatio="true">
                      <image>
@@ -56,7 +56,7 @@
                   <Font size="15.0" />
                </font>
             </JFXButton>
-            <JFXButton alignment="TOP_LEFT" layoutX="-3.0" layoutY="279.0" prefHeight="35.0" prefWidth="126.0" style="-fx-background-color: #485563;" text="List Order" textFill="WHITE">
+            <JFXButton fx:id="btnListOrder" alignment="TOP_LEFT" layoutX="-3.0" layoutY="279.0" onAction="#handleGotoListOrder" prefHeight="35.0" prefWidth="126.0" style="-fx-background-color: #485563;" text="List Order" textFill="WHITE">
                <graphic>
                   <ImageView fitHeight="25.0" fitWidth="25.0" pickOnBounds="true" preserveRatio="true">
                      <image>

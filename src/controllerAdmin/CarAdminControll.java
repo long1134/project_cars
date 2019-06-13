@@ -44,7 +44,7 @@ public class CarAdminControll implements Initializable {
     CarNewServices arrCarNew = new CarNewServices();
     CarOldServices arrCarOld = new CarOldServices();
     private  boolean isUpdate = false;
-
+    private boolean isOpen = false;
     @FXML
     private JFXButton gotoCustomers;
 
@@ -206,13 +206,21 @@ public class CarAdminControll implements Initializable {
     //end popup delete
 
     @FXML
-    void GoToEmployee(ActionEvent event) {
-
+    void GoToEmployee(ActionEvent event) throws IOException {
+        Parent root = FXMLLoader.load(getClass().getResource("/AdminFXML/Employee.fxml"));
+        Stage stage = stageService.mainStage;
+        stage.setOnHidden(a -> Platform.exit());
+        stage.setScene(new Scene(root));
+        stage.show();
     }
 
     @FXML
-    void GoToStore(ActionEvent event) {
-
+    void GoToStore(ActionEvent event) throws IOException {
+        Parent root = FXMLLoader.load(getClass().getResource("/AdminFXML/Store.fxml"));
+        Stage stage = stageService.mainStage;
+        stage.setOnCloseRequest(a-> Platform.exit());
+        stage.setScene(new Scene(root));
+        stage.show();
     }
 
     @FXML
@@ -226,20 +234,34 @@ public class CarAdminControll implements Initializable {
 
     @FXML
     void handleCustomer(ActionEvent event) throws IOException{
-        Parent root =FXMLLoader.load(getClass().getResource("/sample/customers.fxml"));
+        Parent root =FXMLLoader.load(getClass().getResource("/AdminFXML/customer.fxml"));
         Stage stage=stageService.mainStage;
         stage.setOnCloseRequest(e->Platform.exit());
-        stage.setScene(new Scene(root,671,506));
+        stage.setScene(new Scene(root));
         stage.show();
     }
 
+    @FXML
+    void handleRentingCarAdmin(ActionEvent event) throws IOException {
+
+        Parent root = FXMLLoader.load(getClass().getResource("/AdminFXML/Dashboard.fxml"));
+        Stage stage = stageService.mainStage;
+        stage.setOnHidden(a -> Platform.exit());
+        stage.setScene(new Scene(root));
+        stage.show();
+    }
+
+    @FXML
+    void handleShowMenu(MouseEvent event) {
+        Menu.setVisible(true);
+    }
 
     @FXML
     void logoutLogin(ActionEvent event) throws IOException{
         Parent root = FXMLLoader.load(getClass().getResource("/sample/login.fxml"));
         Stage stage = stageService.mainStage;
         stage.setOnHidden(a -> Platform.exit());
-        stage.setScene(new Scene(root,601,506));
+        stage.setScene(new Scene(root));
         stage.show();
     }
 
@@ -467,6 +489,16 @@ public class CarAdminControll implements Initializable {
     }
 
     public void openMenu(MouseEvent mouseEvent) {
+        if(!isOpen)
+        {
+            Menu.setVisible(true);
+            isOpen = false;
+        }
+        else
+        {
+            Menu.setVisible(false);
+            isOpen=true;
+        }
     }
 
     public void hoverMenu(MouseEvent mouseEvent) {

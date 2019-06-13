@@ -1,5 +1,6 @@
 package controllerAdmin;
 
+import JDBC.JDBCConnect;
 import com.jfoenix.controls.JFXButton;
 import controller.stageService;
 import info.Customer;
@@ -18,13 +19,19 @@ import javafx.scene.input.KeyEvent;
 import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.AnchorPane;
 import javafx.stage.Stage;
+import services.customerServices;
 
 import java.io.IOException;
 import java.net.URL;
+import java.sql.SQLException;
+import java.util.ArrayList;
 import java.util.List;
 import java.util.ResourceBundle;
 
 public class customerControl implements Initializable {
+
+    JDBCConnect jdbcConnect = new JDBCConnect();
+    customerServices customerSV = new customerServices();
 
     //cac button click chuyên scence
     @FXML
@@ -48,7 +55,7 @@ public class customerControl implements Initializable {
         Parent root = FXMLLoader.load(getClass().getResource("/AdminFXML/Dashboard.fxml"));
         Stage stage = stageService.mainStage;
         stage.setOnHidden(a -> Platform.exit());
-        stage.setScene(new Scene(root,601,506));
+        stage.setScene(new Scene(root));
         stage.show();
     }
 
@@ -59,7 +66,7 @@ public class customerControl implements Initializable {
         Parent root = FXMLLoader.load(getClass().getResource("/AdminFXML/Car.fxml"));
         Stage stage = stageService.mainStage;
         stage.setOnHidden(a -> Platform.exit());
-        stage.setScene(new Scene(root,601,506));
+        stage.setScene(new Scene(root));
         stage.show();
     }
     @FXML
@@ -69,7 +76,7 @@ public class customerControl implements Initializable {
         Parent root = FXMLLoader.load(getClass().getResource("/AdminFXML/customer.fxml"));
         Stage stage = stageService.mainStage;
         stage.setOnHidden(a -> Platform.exit());
-        stage.setScene(new Scene(root,750,750));
+        stage.setScene(new Scene(root));
         stage.show();
     }
     @FXML
@@ -79,7 +86,7 @@ public class customerControl implements Initializable {
         Parent root = FXMLLoader.load(getClass().getResource("/AdminFXML/ListOrder.fxml"));
         Stage stage = stageService.mainStage;
         stage.setOnHidden(a -> Platform.exit());
-        stage.setScene(new Scene(root,601,506));
+        stage.setScene(new Scene(root));
         stage.show();
     }
     @FXML
@@ -88,7 +95,7 @@ public class customerControl implements Initializable {
         Parent root = FXMLLoader.load(getClass().getResource("/AdminFXML/Store.fxml"));
         Stage stage = stageService.mainStage;
         stage.setOnHidden(a -> Platform.exit());
-        stage.setScene(new Scene(root,601,506));
+        stage.setScene(new Scene(root));
         stage.show();
     }
     @FXML
@@ -97,7 +104,7 @@ public class customerControl implements Initializable {
         Parent root = FXMLLoader.load(getClass().getResource("/AdminFXML/Employee.fxml"));
         Stage stage = stageService.mainStage;
         stage.setOnHidden(a -> Platform.exit());
-        stage.setScene(new Scene(root,601,506));
+        stage.setScene(new Scene(root));
         stage.show();
     }
 
@@ -127,6 +134,23 @@ public class customerControl implements Initializable {
         popupLogout.setVisible(true);
         Menu.setVisible(false);
     }
+
+    @FXML
+    void handleShowMenu(MouseEvent event) {
+        Menu.setVisible(true);
+    }
+
+    @FXML
+    void handleRentingCarAdmin(ActionEvent event) throws IOException {
+        DashboardAdmin.setStyle("-fx-background-color:#de6262");
+
+        Parent root = FXMLLoader.load(getClass().getResource("/AdminFXML/Dashboard.fxml"));
+        Stage stage = stageService.mainStage;
+        stage.setOnHidden(a -> Platform.exit());
+        stage.setScene(new Scene(root));
+        stage.show();
+    }
+
     @FXML
     void outPopupLogout(ActionEvent event) {
         popupLogout.setVisible(false);
@@ -183,15 +207,14 @@ public class customerControl implements Initializable {
     @FXML
     TableColumn<Customer,String> cusPhone = new TableColumn<>("cusPhone");
 
-    //bien luu du lieu day len table
-    final ObservableList<Customer> data = FXCollections.observableArrayList(
-            new Customer("223","hoang ","59","Khach vip","244444145"),
-            new Customer("113"," anh","59","Khach vip","244444145"),
-            new Customer("443","hoang tu","59","Khach vip","244444145"),
-            new Customer("221","tu anh","59","Khach vip","244444145"),
-            new Customer("152","hoang duc","59","Khach thuong","244444145")
+    @FXML
+    private TableColumn<Customer,String> cusEmail;
 
-    );
+    @FXML
+    private TableColumn<Customer,String> cusAddress;
+
+    //bien luu du lieu day len table
+    ArrayList<Customer> data = new ArrayList<>();
     // bien chua kieu nguoi dung
     final ObservableList<String> dataType = FXCollections.observableArrayList(
             new String( "Khach vip"), new String( "Khach thuong"), new String( "Khach tiem nang")
@@ -206,6 +229,12 @@ public class customerControl implements Initializable {
     private TextField age = new TextField() ;
     @FXML
     private TextField phone = new TextField();
+
+    @FXML
+    private TextField Email;
+
+    @FXML
+    private TextField Address;
 
     @FXML
     private TextField searchField = new TextField();
@@ -224,22 +253,14 @@ public class customerControl implements Initializable {
         tempLabel.setText("Them thong tin khach hang");
         editBtn.setVisible(false);
         btnSubmit.setVisible(true);
-//        cbbTypeEdit.setItems(dataType);
-        //continute
     }
 
     //xoa
     @FXML
-    void handleBtnXoa (ActionEvent e){
-//        Button btnInventory = new Button("Inventory");
-//        Button btnCalcTax = new Button("Tax");
-//        btnInventory.disableProperty().bind(
-//                tableShow.getSelectionModel().selectedItemProperty().isNull()
-//        );
+    void handleBtnXoa (ActionEvent e) throws SQLException, ClassNotFoundException {
         Customer cus = tableShow.getSelectionModel().getSelectedItem();
-        data.remove(data.indexOf(cus));
-        tableShow.setItems(data);
-
+        customerSV.deleteCus(cus.id);
+        initTableShow();
     }
 
     //sua
@@ -250,6 +271,8 @@ public class customerControl implements Initializable {
         this.name.setText(cus.name);
         this.age.setText(cus.age);
         this.phone.setText(cus.phone);
+        Email.setText(cus.email);
+        Address.setText(cus.address);
         cbbTypeEdit.setValue(cus.type);
         System.out.println(cus.type);
         editBtn.setVisible(true);
@@ -264,74 +287,58 @@ public class customerControl implements Initializable {
     void handleBtnX (ActionEvent e){
         popupEdit.setVisible(false);
     }
+
     @FXML
-    void handleBtnSubmit (ActionEvent e){
+    void handleBtnSubmit (ActionEvent e) throws SQLException, ClassNotFoundException {
         String temp=cbbTypeEdit.getSelectionModel().getSelectedItem();
         String idf= id.getText();
         String agef= age.getText();
         String namef= name.getText();
         String phonef= phone.getText();
+        String email = Email.getText();
+        String address = Address.getText();
 
-        Customer cus =new Customer(idf,namef,agef,temp,phonef);
+        Customer cus =new Customer(idf,namef,agef,temp,phonef,email,address);
         System.out.println(cus.name + cus.id + cus.type + cus.phone + cus.age);
 
-        data.add(cus);
-        tableShow.setItems(data);
+        customerSV.addNewCus(cus);
+        initTableShow();
 
         System.out.println(data);
         this.id.setText("");
         this.age.setText("");
         this.name.setText("");
         this.phone.setText("");
+        Email.setText("");
+        Address.setText("");
         return;
     }
+
     @FXML
     void handleSearchField (ActionEvent e){
     }
 
     @FXML
-    void editBtnHandle (ActionEvent e){
-        String temp=cbbTypeEdit.getSelectionModel().getSelectedItem();
+    void editBtnHandle (ActionEvent e) throws SQLException, ClassNotFoundException {
+        String temp= cbbTypeEdit.getSelectionModel().getSelectedItem();
         String idf= id.getText();
         String agef= age.getText();
         String namef= name.getText();
         String phonef= phone.getText();
-        System.out.println(idf + agef + namef +phonef);
-        Customer cus =new Customer(idf,namef,agef,temp,phonef);
-        System.out.println(cus.name + cus.id + cus.phone + cus.type + cus.age);
+        String email = Email.getText();
+        String address = Address.getText();
+        Customer cus =new Customer(idf,namef,agef,temp,phonef,email,address);
 
-//        for (Customer i :data) {
-//            System.out.println(i.id);
-//            System.out.println(cus.id);
-//
-//            if( i.getID()==cus.id){
-//                i.xuat();
-//            }
-//
-//        }
-//        int index;
-//        for (int i =0;i < data.size();i++)
-//        {
-//            if(data.get(i).id==cus.id)
-//            {
-//                index = i;
-//                System.out.println(index);
-//                break;
-//            }
-//        }
+        customerSV.updateCus(cus);
 
-
-
-//        data.set(data.indexOf(data.filtered(sv ->sv.id==cus.id)),cus);
-//        List<Customer> temp=
-
-//        System.out.println( data.indexOf(data.stream().filter(a -> a.getID()==cus.id)));
-//        System.out.println(data.indexOf(data.filtered(customer ->{
-//
-//        })));
-
-        System.out.println(data.filtered(sv ->sv.id==cus.id));
-        tableShow.setItems(data);
+        initTableShow();
+        this.id.setText("");
+        this.age.setText("");
+        this.name.setText("");
+        this.phone.setText("");
+        Email.setText("");
+        Address.setText("");
+        handleBtnX(e);
     }
     @FXML
     int handleSearchField(KeyEvent e)
@@ -346,7 +353,6 @@ public class customerControl implements Initializable {
             this.tableShow.setItems(tempcus);
             return 1;
         }
-        this.tableShow.setItems(data);
         return -1;
     }
     ObservableList<Customer> findKey(String key)
@@ -363,33 +369,32 @@ public class customerControl implements Initializable {
         return a;
     }
 
-
-
-
-    public void initTableShow()
-    {
-        tableShow.getColumns().addAll(cusID,cusName,cusAge,cusType,cusPhone);
+    public void initTableShow() throws SQLException, ClassNotFoundException {
 
         cusID.setCellValueFactory((TableColumn.CellDataFeatures<Customer, String> param) -> new ReadOnlyStringWrapper(param.getValue().id));
         cusName.setCellValueFactory((TableColumn.CellDataFeatures<Customer, String> param) -> new ReadOnlyStringWrapper(param.getValue().name));
         cusAge.setCellValueFactory((TableColumn.CellDataFeatures<Customer, String> param) -> new ReadOnlyStringWrapper(param.getValue().age ));
         cusType.setCellValueFactory((TableColumn.CellDataFeatures<Customer, String> param) -> new ReadOnlyStringWrapper(param.getValue().type));
         cusPhone.setCellValueFactory((TableColumn.CellDataFeatures<Customer, String> param) -> new ReadOnlyStringWrapper(param.getValue().phone));
+        cusEmail.setCellValueFactory((TableColumn.CellDataFeatures<Customer, String> param) -> new ReadOnlyStringWrapper(param.getValue().email));
+        cusAddress.setCellValueFactory((TableColumn.CellDataFeatures<Customer, String> param) -> new ReadOnlyStringWrapper(param.getValue().address));
 
-        tableShow.setItems(data);
+        tableShow.setItems(FXCollections.observableArrayList(customerSV.getArrDefault()));
     }
-
-
-
-
 
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
             cbbType.setItems(dataType);
             cbbTypeEdit.setItems(dataType);
             tableShow.setVisible(true);
-
-        initTableShow();
-            popupEdit.setVisible(false);
+        popupLogout.toFront();
+        try {
+            initTableShow();
+        } catch (SQLException e) {
+            e.printStackTrace();
+        } catch (ClassNotFoundException e) {
+            e.printStackTrace();
+        }
+        popupEdit.setVisible(false);
     }
 }

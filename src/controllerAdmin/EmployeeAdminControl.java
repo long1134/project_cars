@@ -18,11 +18,17 @@ import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.AnchorPane;
 import javafx.stage.Stage;
 import info.employee;
+import services.EmployeeServices;
+
 import java.io.IOException;
 import java.net.URL;
+import java.sql.SQLException;
+import java.util.ArrayList;
 import java.util.ResourceBundle;
 
 public class EmployeeAdminControl implements Initializable {
+
+    EmployeeServices arrEmployee = new EmployeeServices();
 
     //cac button click chuyên scence
     @FXML
@@ -30,6 +36,9 @@ public class EmployeeAdminControl implements Initializable {
 
     @FXML
     private JFXButton CustomersAdmin;
+
+    @FXML
+    private JFXButton btnRentingCar;
 
     @FXML
     private JFXButton ListOrderAdmin;
@@ -51,9 +60,11 @@ public class EmployeeAdminControl implements Initializable {
         Parent root = FXMLLoader.load(getClass().getResource("/AdminFXML/Dashboard.fxml"));
         Stage stage = stageService.mainStage;
         stage.setOnHidden(a -> Platform.exit());
-        stage.setScene(new Scene(root,601,506));
+        stage.setScene(new Scene(root));
         stage.show();
     }
+
+
 
     @FXML
     void handleListCarAdmin(ActionEvent event) throws IOException {
@@ -62,7 +73,7 @@ public class EmployeeAdminControl implements Initializable {
         Parent root = FXMLLoader.load(getClass().getResource("/AdminFXML/Car.fxml"));
         Stage stage = stageService.mainStage;
         stage.setOnHidden(a -> Platform.exit());
-        stage.setScene(new Scene(root,601,506));
+        stage.setScene(new Scene(root));
         stage.show();
     }
     @FXML
@@ -72,7 +83,7 @@ public class EmployeeAdminControl implements Initializable {
         Parent root = FXMLLoader.load(getClass().getResource("/AdminFXML/customer.fxml"));
         Stage stage = stageService.mainStage;
         stage.setOnHidden(a -> Platform.exit());
-        stage.setScene(new Scene(root,601,506));
+        stage.setScene(new Scene(root));
         stage.show();
     }
     @FXML
@@ -82,7 +93,7 @@ public class EmployeeAdminControl implements Initializable {
         Parent root = FXMLLoader.load(getClass().getResource("/AdminFXML/ListOrder.fxml"));
         Stage stage = stageService.mainStage;
         stage.setOnHidden(a -> Platform.exit());
-        stage.setScene(new Scene(root,601,506));
+        stage.setScene(new Scene(root));
         stage.show();
     }
     @FXML
@@ -91,7 +102,7 @@ public class EmployeeAdminControl implements Initializable {
         Parent root = FXMLLoader.load(getClass().getResource("/AdminFXML/Store.fxml"));
         Stage stage = stageService.mainStage;
         stage.setOnHidden(a -> Platform.exit());
-        stage.setScene(new Scene(root,601,506));
+        stage.setScene(new Scene(root));
         stage.show();
     }
     @FXML
@@ -100,7 +111,7 @@ public class EmployeeAdminControl implements Initializable {
         Parent root = FXMLLoader.load(getClass().getResource("/AdminFXML/Employee.fxml"));
         Stage stage = stageService.mainStage;
         stage.setOnHidden(a -> Platform.exit());
-        stage.setScene(new Scene(root,601,506));
+        stage.setScene(new Scene(root));
         stage.show();
     }
     @FXML
@@ -136,7 +147,7 @@ public class EmployeeAdminControl implements Initializable {
         Parent root = FXMLLoader.load(getClass().getResource("/sample/login.fxml"));
         Stage stage = stageService.mainStage;
         stage.setOnHidden(a -> Platform.exit());
-        stage.setScene(new Scene(root,601,506));
+        stage.setScene(new Scene(root));
         stage.show();
     }
     @FXML
@@ -168,8 +179,8 @@ public class EmployeeAdminControl implements Initializable {
             new employee("321","doan","tu","2511","123456789","25/11/2019","122","Nhan Vien","255","150000","222"),
             new employee("233","doan","tu","2511","123456789","25/11/2019","122","Nhan Vien","255","150000","222"),
             new employee("123","doan","tu","2511","123456789","25/11/2019","122","Nhan Vien","255","150000","222")
-
     );
+
     final ObservableList<String> dataType = FXCollections.observableArrayList(
             new String( "Quan ly"), new String( "Nhan Vien")
     );
@@ -200,12 +211,6 @@ public class EmployeeAdminControl implements Initializable {
     @FXML
     private ComboBox<String>  chucvu = new ComboBox<String>();
 
-
-
-
-
-
-
     @FXML
     void handleBtnXoa (ActionEvent e){
         employee em = tableShow.getSelectionModel().getSelectedItem();
@@ -217,16 +222,13 @@ public class EmployeeAdminControl implements Initializable {
     void handleBtnThem (ActionEvent e){
         popupEdit.setVisible(true);
         tempLabel.setText("Them thong tin khach hang");
-//        cbbTypeEdit.setItems(dataType);
-        //continute
     }
     //sua
     @FXML
     JFXButton btnEdit=new JFXButton();
 
-
     @FXML
-    void handleBtnEdit(ActionEvent e){
+    void handleBtnEdit(ActionEvent e) throws SQLException, ClassNotFoundException {
         String cv=chucvu.getSelectionModel().getSelectedItem();
         String id= this.id.getText();
         String ho= this.Ho.getText();
@@ -239,8 +241,11 @@ public class EmployeeAdminControl implements Initializable {
         String luong= this.luong.getText();
         String hoahong= this.tienHoaHong.getText();
 
-      employee em = (employee) data.stream().filter(employee -> employee.ID == id);
-        System.out.println(em);
+        employee employee = tableShow.getSelectionModel().getSelectedItem();
+        employee emp = new employee(employee.ID,ho,ten,userid,pass,date,maql,cv,maphong,luong,hoahong);
+        arrEmployee.updateEmployee(emp);
+        initTableShow();
+        popupEdit.setVisible(false);
     }
 
     @FXML
@@ -271,8 +276,9 @@ public class EmployeeAdminControl implements Initializable {
     void handleBtnX (ActionEvent e){
         popupEdit.setVisible(false);
     }
+
     @FXML
-    void handleBtnSubmit (ActionEvent e){
+    void handleBtnSubmit (ActionEvent e) throws SQLException, ClassNotFoundException {
         String cv=chucvu.getSelectionModel().getSelectedItem();
         String id= this.id.getText();
         String ho= this.Ho.getText();
@@ -298,19 +304,10 @@ public class EmployeeAdminControl implements Initializable {
         this.tienHoaHong.setText("");
 
         employee em = new employee(id,ho,ten,userid,pass,date,maql,cv,maphong,luong,hoahong);
-        data.add(em);
-
-
-
-
-
-//        Customer cus =new Customer(idf,namef,agef,temp,phonef);
-//        data.add(cus);
-//        tableShow.setItems(data);
-//        System.out.println(data);
-
-        return;
+        arrEmployee.addNEmployee(em);
+        initTableShow();
     }
+
     @FXML
     TextField searchField=new TextField();
 
@@ -330,6 +327,7 @@ public class EmployeeAdminControl implements Initializable {
         this.tableShow.setItems(data);
         return -1;
     }
+
     ObservableList<employee> findKey(String key)
     {    final   ObservableList<employee> a= FXCollections.observableArrayList();
         for(int i =0 ;i<data.size();i++){
@@ -343,9 +341,6 @@ public class EmployeeAdminControl implements Initializable {
         System.out.println(a);
         return a;
     }
-
-
-
 
     @FXML
     TableColumn<employee,String> idCol = new TableColumn<>("idCol");
@@ -368,9 +363,7 @@ public class EmployeeAdminControl implements Initializable {
     @FXML
     TableColumn<employee,String> salaryCol = new TableColumn<>("salaryCol");
 
-    public void initTableShow()
-    {
-        tableShow.getColumns().addAll(idCol,nameCol,userIDCol,passCol,dateWorkCol,supervisorIDCol,positionCol,apartmentCol,salaryCol);
+    public void initTableShow() throws SQLException, ClassNotFoundException {
 
         idCol.setCellValueFactory((TableColumn.CellDataFeatures<employee, String> param) -> new ReadOnlyStringWrapper(param.getValue().ID));
         nameCol.setCellValueFactory((TableColumn.CellDataFeatures<employee, String> param) -> new ReadOnlyStringWrapper(param.getValue().Ten));
@@ -384,16 +377,21 @@ public class EmployeeAdminControl implements Initializable {
         apartmentCol.setCellValueFactory((TableColumn.CellDataFeatures<employee, String> param) -> new ReadOnlyStringWrapper(param.getValue().MaPhong ));
         salaryCol.setCellValueFactory((TableColumn.CellDataFeatures<employee, String> param) -> new ReadOnlyStringWrapper(param.getValue().Luong));
 
-        tableShow.setItems(data);
+        tableShow.setItems(FXCollections.observableArrayList(arrEmployee.getArrDefault()));
     }
-
 
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
         chucvu.setItems(dataType);
         tableShow.setVisible(true);
         popupEdit.setVisible(false);
-        initTableShow();
+        try {
+            initTableShow();
+        } catch (SQLException e) {
+            e.printStackTrace();
+        } catch (ClassNotFoundException e) {
+            e.printStackTrace();
+        }
     }
 
 // end

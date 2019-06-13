@@ -28,7 +28,8 @@ public class CarNewServices implements Initializable {
         jdbcConnect.updateNewCar(car);
     }
 
-    public void deleteNewCar(String id) throws SQLException {
+    public void deleteNewCar(String id) throws SQLException
+    {
         jdbcConnect.DeleteCarNew(id);
     }
 
