@@ -146,16 +146,17 @@
             </JFXButton>
          </children>
       </AnchorPane>
-      <AnchorPane layoutX="166.0" layoutY="203.0" prefHeight="307.0" prefWidth="449.0">
+      <AnchorPane layoutX="166.0" layoutY="203.0" prefHeight="307.0" prefWidth="614.0">
          <children>
-            <TableView fx:id="tableShow" prefHeight="307.0" prefWidth="529.0">
+            <TableView fx:id="tableShow" prefHeight="307.0" prefWidth="614.0">
                <columns>
-                  <TableColumn fx:id="idCol" prefWidth="103.0" text="id" />
-                  <TableColumn fx:id="khCol" prefWidth="83.0" text="id_kh" />
-                  <TableColumn fx:id="nvCol" prefWidth="89.0" text="id_nv" />
-                  <TableColumn fx:id="dateCol" prefWidth="88.0" text="ngày nhập" />
-                  <TableColumn fx:id="TTCol" prefWidth="91.0" text="tổng tiền" />
-                  <TableColumn fx:id="PTCol" prefWidth="75.0" text="Phương thức thanh toán" />
+                  <TableColumn fx:id="rentName" prefWidth="103.0" text="mã thuê " />
+                  <TableColumn fx:id="rentBrand" prefWidth="83.0" text="hãng xe " />
+                  <TableColumn fx:id="rentPrice" prefWidth="89.0" text="giá thuê" />
+                  <TableColumn fx:id="rentKM" prefWidth="88.0" text="số km" />
+                  <TableColumn fx:id="rentDay" prefWidth="91.0" text="ngày thuê" />
+                  <TableColumn fx:id="unrent" prefWidth="75.0" text="ngày trả " />
+                  <TableColumn fx:id="condition" prefWidth="75.0" text="trạng thái" />
                </columns>
             </TableView>
          </children>
@@ -165,30 +166,30 @@
             <JFXButton fx:id="btnThem" layoutX="25.0" layoutY="27.0" onAction="#handleBtnThem" style="-fx-background-color: #B380807D;" text="them" textFill="#f5efef" />
             <JFXButton fx:id="btnXoa" layoutX="98.0" layoutY="27.0" onAction="#handleBtnXoa" style="-fx-background-color: #B380807D;" text="xoa" textFill="#f8f7f7" />
             <JFXButton fx:id="bntSua" layoutX="159.0" layoutY="27.0" onAction="#handleBtnSua" style="-fx-background-color: #B380807D;" text="sua" textFill="#f5f2f2" />
-            <TextField fx:id="searchField" layoutX="413.0" layoutY="27.0" onKeyReleased="#handleSearchField" promptText="tim kiem theo ho ten">
+            <TextField fx:id="searchField" layoutX="307.0" layoutY="27.0" onKeyReleased="#handleSearchField" promptText="tim kiem theo ID">
                <effect>
                   <Blend />
                </effect>
             </TextField>
-            <ComboBox fx:id="cbbType" layoutX="226.0" layoutY="27.0" prefHeight="31.0" prefWidth="162.0" promptText="trạng thái" />
          </children>
       </AnchorPane>
-      <AnchorPane fx:id="popupEdit" layoutX="742.0" layoutY="181.0" prefHeight="475.0" prefWidth="386.0" style="-fx-background-color: #B380807D;">
+      <AnchorPane fx:id="popupEdit" layoutX="796.0" layoutY="182.0" prefHeight="474.0" prefWidth="332.0" style="-fx-background-color: #B380807D;" visible="false">
          <children>
-            <TextField fx:id="id" layoutX="100.0" layoutY="87.0" promptText="id" />
-            <TextField fx:id="id_kh" layoutX="100.0" layoutY="133.0" promptText="id_kh" />
-            <TextField fx:id="id_nv" layoutX="100.0" layoutY="180.0" promptText="id_nv" />
-            <TextField fx:id="Tongtien" layoutX="100.0" layoutY="318.0" promptText="Tongtien" />
+            <TextField fx:id="mathue" layoutX="100.0" layoutY="68.0" promptText="mã thuê" />
+            <TextField fx:id="hangxe" layoutX="100.0" layoutY="109.0" promptText="Hãng xe" />
+            <TextField fx:id="giathue" layoutX="100.0" layoutY="153.0" promptText="Giá thuê" />
+            <TextField fx:id="rentday" layoutX="100.0" layoutY="244.0" promptText="ngày thuê" />
             <JFXButton fx:id="btnSubmit" layoutX="254.0" layoutY="397.0" onAction="#handleBtnSubmit" style="-fx-background-color: #ff0e83;" text="submit" textFill="#e1e1e1" />
             <JFXButton fx:id="btnX" layoutX="343.0" layoutY="12.0" onAction="#handleBtnX" style="-fx-background-color: #de6262;" text="X" textFill="WHITE" />
-            <Label fx:id="tempLabel" alignment="TOP_CENTER" layoutX="138.0" layoutY="25.0" prefHeight="36.0" prefWidth="111.0" text="Label" textAlignment="JUSTIFY" wrapText="true">
+            <Label fx:id="tempLabel" alignment="TOP_CENTER" layoutX="54.0" layoutY="25.0" prefHeight="43.0" prefWidth="266.0" text="Label" textAlignment="JUSTIFY" wrapText="true">
                <font>
                   <Font size="23.0" />
                </font>
             </Label>
-            <JFXButton fx:id="editBtn" layoutX="54.0" layoutY="397.0" onAction="#editBtnHandle" style="-fx-background-color: red;" text="edit" textFill="#fffdfd" />
-            <ComboBox fx:id="httt" layoutX="100.0" layoutY="268.0" prefHeight="31.0" prefWidth="187.0" promptText="hình thức thành toán" />
-            <TextField fx:id="ngnhap" layoutX="100.0" layoutY="222.0" promptText="ngày nhập" />
+            <JFXButton fx:id="editBtn" layoutX="54.0" layoutY="397.0" onAction="#editBtnHandle" style="-fx-background-color: red;" text="edit" textFill="#fffdfd" visible="false" />
+            <ComboBox fx:id="conditioncb" layoutX="100.0" layoutY="289.0" onAction="#handleConditionCB" prefHeight="31.0" prefWidth="187.0" promptText="Trạng thái" />
+            <TextField fx:id="sokm" layoutX="100.0" layoutY="198.0" promptText="số km" />
+            <TextField fx:id="unrentday" layoutX="100.0" layoutY="345.0" promptText="ngày trả " visible="false" />
          </children>
       </AnchorPane>
    </children>
